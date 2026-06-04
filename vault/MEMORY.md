@@ -30,6 +30,9 @@
 - [GUARDA-004 Suelo de costo](20_Guardas/GUARDA-004_Suelo-de-costo.md) — nunca cotizar bajo el costo base
 - [GUARDA-005 Sin hardcodeo de cuentas](20_Guardas/GUARDA-005_Sin-hardcodeo-de-cuentas.md) — IDs/refs/keys solo en env/config → Xe portable, migración trivial
 
+## Veredictos
+- [VEREDICTO-001 Lazo Starter](40_Postmortems/VEREDICTO-001_lazo-starter.md) — **PASA:** Xe orquestó agente-clinicas y creó una clínica real en DB local de prueba (verificado REST+psql); cierra Fase 2→3; contrato validado
+
 ## Fundadores / lentes regionales
 - [Lentes regionales](30_Founders/lentes-regionales.md) — ×8/×6/×3, roles, regla de discrepancia (escala, no promedia)
 - [Preguntas de entrevista](30_Founders/preguntas-entrevista.md) — 23 huecos de criterio que la mente NO rellena

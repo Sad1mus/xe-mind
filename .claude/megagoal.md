@@ -22,9 +22,11 @@ Gold ([[DEC-006]], $1,749/mo) = **Agentes IA ilimitados · Multicanal (web+Whats
 
 ---
 
-## ▶️ GOAL ACTIVO — Fase 2→3: contrato probado en producción (la base de Gold)
+## ✅ Fase 2→3 — CERRADA (VEREDICTO-001, 2026-06-04)
 
-**Objetivo:** llevar el lazo (ya probado en dry-run) a **una ejecución real** del bundle base (Starter→`basic`, [[DEC-009]]) — esto valida el **contrato de capacidades** sobre el que se enchufan TODOS los módulos Gold.
+Lazo Starter **ejecutado de verdad**: el conector `integrations/clinics/` corrió `nueva_clinica.ts` contra una DB local de prueba → clínica "Sunrise Vet Clinic" creada y verificada (REST + psql). Guardas respetadas (GUARDA-001 con `--confirm`, GUARDA-005 sin hardcode, sin tocar prod ni el producto). **El contrato de capacidades está validado en ejecución real** → habilita la construcción paralela de módulos Gold. Ver `vault/40_Postmortems/VEREDICTO-001`.
+
+**Objetivo (cumplido):** llevar el lazo de dry-run a una **ejecución real** del bundle base (Starter→`basic`) que valida el contrato sobre el que se enchufan TODOS los módulos Gold.
 
 **Condición de cierre (falsable):** la mente hace discovery→cotización→propone execute; **un humano aprueba el cobro/creación** y el asistente queda vivo. "La mente lo hizo; yo solo firmé." Sin tocar lo que ya factura (strangler-fig); MCP read-first; `execute()` tras OK humano ([[GUARDA-001]]).
 
@@ -36,7 +38,8 @@ Gold ([[DEC-006]], $1,749/mo) = **Agentes IA ilimitados · Multicanal (web+Whats
 
 ## ⏸ EN COLA hacia Gold (no empezar sin cerrar el anterior)
 
-- **Fase 4 — Construir los módulos-gap de Gold**, cada uno al **contrato de capacidades** (manifest/dry_run/execute/oracle), probado con su oráculo, **sin romper lo que factura**:
+## ▶️ GOAL ACTIVO — Fase 4: construir los módulos-gap de Gold
+Cada uno al **contrato de capacidades** (manifest/dry_run/execute/oracle), probado con su oráculo, **sin romper lo que factura**. Jordy + HaxelGG se reparten módulos:
   - 4a **Video IA** (M5) — el gap más visible de Gold. Definir proveedor (HeyGen/Higgsfield) y módulo.
   - 4b **Multicanal unificado** (M4) — web + social sobre el mismo cerebro del agente.
   - 4c **Multi-agente / ilimitado** (M3) — del 1-agente-por-cliente a N.
