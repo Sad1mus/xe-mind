@@ -9,9 +9,11 @@ Una mente, **tres lentes regionales** (USA ×8 / EU ×6 / LATAM ×3), que **abso
 
 ---
 
-## ✅ GOAL ACTIVO — Fase 1: Fundación + criterio de los fundadores
+## ✅ FASE 1 — CERRADA (VEREDICTO humano 2026-06-04)
 
-**Objetivo:** que la mente tenga su estándar epistémico naciendo (criterio destilado de artefactos REALES) **sin tocar el código que factura**. Niveles 1-3 del blueprint 80/20 (Memory · Planning · Context Engineering).
+Criterio semilla firmado: **DEC-002, DEC-004, DEC-005, DEC-006 (pricing autoritativo), DEC-007 (marca/Xe) aceptadas; GUARDA-001..004 aceptadas; DEC-001 superada; DEC-003 retirada.** Las 9 condiciones cumplidas. 20 huecos de criterio quedan como inyección humana continua (no bloquean).
+
+**Objetivo (cumplido):** que la mente tenga su estándar epistémico naciendo (criterio destilado de artefactos REALES) **sin tocar el código que factura**. Niveles 1-3 del blueprint 80/20 (Memory · Planning · Context Engineering).
 
 **Condiciones de cierre (todas verificables; si una falla, la fase NO está cerrada):**
 
@@ -33,9 +35,16 @@ Una mente, **tres lentes regionales** (USA ×8 / EU ×6 / LATAM ×3), que **abso
 
 ---
 
-## ⏸ EN COLA (no activos — no empezar hasta cerrar Fase 1)
+## ▶️ GOAL ACTIVO — Fase 2: El lazo Starter (punto de inflexión)
 
-- **Fase 2 — Rebanada Gold discovery→cotización.** La mente ejecuta discovery (generaliza las 10 preguntas a Gold) y produce cotización (v5), en voz de fundadores, autónoma salvo dinero/firma. + Hooks (secret-scan, GUARDA dinero) + MCP read-first (Supabase/Stripe/GitHub). Cierre: cotiza 1 caso real de cliente y un humano la aprueba sin corregir el número.
+**Objetivo:** probar UNA vez el lazo `cliente → discovery (DEC-004) → cotización Starter por región (DEC-006) → invocar nueva_clinica.ts como subagente vía MCP → asistente vivo`, con **GUARDA-001** (cobrar/firmar/enviar = OK humano) respetada. Si corre limpio, de aquí sale el **contrato de capacidades** para crecer en paralelo.
+
+**Bloqueado hasta decisión humana (GUARDA-003 — la mente no inventa):**
+- **Hueco #17/#12:** mapeo tier comercial (`Starter`) → plan de entrega (`basic/growth/scale`). Sin esto la mente no puede disparar el pipeline.
+- **Caso de prueba:** ¿cliente real o simulado? ¿qué vertical (vet/dental/estética)?
+
+**Condición de cierre:** la mente recibe los datos de un cliente Starter, produce la cotización correcta por región, dispara la creación del asistente, y un humano solo aprueba el cobro. "La mente lo hizo; yo solo firmé."
+
 - **Fase 3 — Absorción incremental (strangler-fig).** Orquesta las 18 skills + pipeline clínicas; reescribe 1 pieza al estándar nuevo solo si la vieja (oráculo) confirma mejora.
 - **Fase 4+ — Loop agéntico de onboarding completo**, tres regiones, autonomía supervisada. El norte.
 

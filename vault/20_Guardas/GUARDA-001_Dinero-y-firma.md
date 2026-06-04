@@ -2,6 +2,7 @@
 id: GUARDA-001
 dueño: Jordy + socios
 ámbito: financiero
+estado: aceptada (VEREDICTO 2026-06-04)
 ---
 **Restringe:** ejecutar un **cobro**, firmar un **contrato**, o **enviar una comunicación al cliente**. La mente puede *redactar* la cotización, el contrato y el mensaje; **ejecutarlos requiere OK humano explícito**.
 

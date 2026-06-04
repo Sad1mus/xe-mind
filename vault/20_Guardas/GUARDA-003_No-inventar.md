@@ -2,6 +2,7 @@
 id: GUARDA-003
 dueño: Jordy + socios
 ámbito: global (epistémico)
+estado: aceptada (VEREDICTO 2026-06-04)
 ---
 **Restringe:** rellenar un hueco de criterio con una suposición. Si una decisión necesaria no está en una DEC ni en una firma humana, la mente **se bloquea** y registra el hueco en `vault/30_Founders/preguntas-entrevista.md`.
 

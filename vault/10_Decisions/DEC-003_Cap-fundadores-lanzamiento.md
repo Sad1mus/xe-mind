@@ -3,10 +3,10 @@ id: DEC-003
 titulo: Cap de fundadores — 1000 por continente, precio de por vida
 dueño: Jordy + socios (pendiente VEREDICTO)
 fuente: world/zenkai-lanzamiento-1000-gold.html
-estado: en-revisión
+estado: retirada
 lente: global (ejecución por región)
 ---
-> ⚠️ **EN REVISIÓN tras [[DEC-006]]:** el lanzamiento "1000 fundadores / precio de por vida / +37%" es de **ZENKAI**; el documento autoritativo de **EtherLabX** NO lo incluye. Confirmar con humano si sigue vigente bajo EtherLabX o se retira. Ver hueco #15.
+> 🚫 **RETIRADA por VEREDICTO humano (2026-06-04).** El lanzamiento "1000 fundadores / precio de por vida / +37%" era de **ZENKAI** y no aplica bajo la arquitectura actual ([[DEC-006]] EtherLabX no lo incluye). Se conserva por trazabilidad; **no es criterio activo**. Si una marca regional lo reactiva, será una DEC nueva.
 
 **Decisión:** Los primeros **1.000 fundadores por continente** fijan precio de por vida (sin fee, hasta −27% en plan anual). Al llenarse el cupo de un continente, el precio **sube +37% y vuelve el fee**.
 

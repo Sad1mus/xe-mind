@@ -2,6 +2,7 @@
 id: GUARDA-002
 dueño: Jordy + socios
 ámbito: datos / regional
+estado: aceptada (VEREDICTO 2026-06-04)
 ---
 **Restringe:** mover datos de cliente con requisito de residencia **fuera de su región** (UE/GDPR, leyes locales LATAM). Para esos casos se usa inferencia/almacenamiento local; el índice global referencia, no copia el dato regulado.
 

@@ -2,6 +2,7 @@
 id: GUARDA-004
 dueño: Jordy + socios
 ámbito: financiero
+estado: aceptada (VEREDICTO 2026-06-04)
 ---
 **Restringe:** emitir una cotización **por debajo del suelo de costo recurrente** del plan. Ningún descuento, compromiso ni cliente estratégico puede cruzar el suelo sin OK humano explícito.
 

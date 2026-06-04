@@ -1,11 +1,13 @@
 ---
 id: DEC-004
 titulo: Flujo de discovery — cuestionario mínimo, time-to-value
-dueño: Jordy + socios (pendiente VEREDICTO)
+dueño: Jordy + socios
 fuente: resultados/agente-clinicas/docs/ONBOARDING_CLIENTE.md
-estado: propuesta
+estado: aceptada
 lente: global
 ---
+> ✅ **Aceptada por VEREDICTO humano (Jordy + socio, 2026-06-04).**
+
 **Decisión:** El discovery se estructura como un **cuestionario mínimo** que captura solo lo necesario para (a) configurar el sistema y (b) mostrarle el ROI al cliente. Patrón de referencia probado = las **10 preguntas** del onboarding de clínicas: nombre, dirección, servicios, horario, duración de cita, medios de pago, extras frecuentes, **valor promedio de cita** (para mostrar ROI), teléfono humano de escalamiento, link de Google Maps (reseñas).
 
 **Porqué:** time-to-value. La promesa de venta es "listo en 5 días"; entregar antes (el pipeline real arma el agente en ~10 min) sorprende y fideliza.
