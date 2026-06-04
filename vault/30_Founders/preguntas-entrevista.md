@@ -27,7 +27,7 @@
 14. **Precios locales de los tiers no-Gold:** el doc autoritativo solo publica el precio regional de **Gold** (USA $1,749 · EU €1,149 · LATAM ≈2,360,000 COP). ¿Cuáles son los de Starter/Silver/Enterprise/Partner por región? (la mente NO los inventa; hoy "se confirman por FX en la propuesta").
 15. **¿Sigue vigente el lanzamiento "1000 fundadores"** (ZENKAI) bajo EtherLabX, o se retira? El doc de EtherLabX no lo menciona (DEC-003 quedó en revisión).
 16. ~~Marca: ZENKAI vs EtherLabX~~ → **RESUELTO (DEC-007):** Xe = paraguas/mente (provisional); ZENKAI = Europa; EtherLabX = LATAM; Américas = por definir.
-17. **Mapeo onboarding-de-entrega:** el pipeline clínicas usa planes `basic/growth/scale`; EtherLabX vende `Starter/Silver/Gold/Enterprise/Partner`. ¿Cómo mapea cada tier comercial al plan técnico de entrega? (relacionado con hueco #12)
+17. **Mapeo onboarding-de-entrega:** `Starter→basic` ✅ **RESUELTO ([[DEC-009]], 2026-06-04)**. Falta mapear Silver/Gold/Enterprise/Partner → (`growth`/`scale`/?) — los planes de entrega son 3 y los tiers 5, no es 1:1.
 
 ## Arquitectura de marca (tras DEC-007)
 18. **¿El pricing de DEC-006 es compartido por las 3 marcas** (Xe/ZENKAI/EtherLabX) o cada marca regional tiene el suyo? El doc está en etherlabx.com (ahora = LATAM) pero lista 3 continentes — ambiguo.
@@ -38,5 +38,5 @@
 21. **¿Cuáles son los 10 mayores nichos/sectores de EE.UU.** a los que se ofrecerá la tecnología? → **Candidatos investigados con datos en [[nichos-us-candidatos]]** (2026-06-04). Falta que el humano ELIJA los 10 definitivos. Hoy solo existen 3 verticales (vet/dental/estética) tuneados a LATAM.
 22. **Socio `HaxelGG`:** ¿qué marca/región opera y cuál es su autoridad de decisión? (relacionado con #8, #19)
 23. **Inventario del portafolio:** ¿lista oficial de TODAS las capacidades del portafolio (las que componen Gold/Enterprise: video, multicanal web/social, integraciones, analytics, multi-agente…)? Para saber qué módulos faltan construir.
-24. **`zenkai-super-brain` (HaxelGG):** el socio ya tiene un "cerebro" propio. ¿Se **funde en Xe** (una sola mente) o coexiste separado? Si coexisten sin contrato compartido = divergencia garantizada. Decisión humana urgente.
+24. **`zenkai-super-brain` (HaxelGG):** → **DIRECCIÓN DADA (Jordy, 2026-06-04): todo se funde en Xe** ("todo en xe", una sola mente). ⚠️ Pendiente que **HaxelGG lo confirme y migre** su trabajo a `xe-mind` — es su repo; la fusión requiere su alineación, no solo la directiva.
 25. **Plataformas cripto/fintech** (`smc`, `ZAT`, `midas`): ¿entran al portafolio de la agencia como un vertical (fintech) o se quedan en dominio MIDAS? Hoy las trato como MIDAS-adjacent, fuera del core agencia.

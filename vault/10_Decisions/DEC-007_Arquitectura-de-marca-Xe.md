@@ -17,6 +17,8 @@ lente: global
 
 **Porqué:** cada socio opera su marca regional; la mente (Xe) es la capa de fusión que las gobierna a todas con el mismo ADN epistémico.
 
+> ✅ **Confirmado (2026-06-04):** Xe es la **fusión TOTAL de las agencias de los tres continentes**. **Todo el desarrollo se consolida aquí, en `xe-mind`** — una sola mente, un solo repo. Las marcas regionales (ZENKAI/EtherLabX/Américas) son lentes; el desarrollo y el criterio viven en Xe.
+
 **Supuestos:** las tres marcas comparten DEC/GUARDAS (criterio) y **posiblemente** el pricing — a confirmar (ver hueco #18).
 
 **Qué la invalidaría:** que "Xe" deje de ser provisional y se fije/cambie; que los socios decidan unificar en una sola marca; que una marca regional necesite criterio que contradiga al paraguas (→ regla de discrepancia, escala).

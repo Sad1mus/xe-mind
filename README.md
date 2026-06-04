@@ -1,22 +1,31 @@
-# zenkai-mind — La Mente de la Agencia
+# Xe — La Mente de la Agencia Global
 
-Segundo cerebro de Zenithstone. **Hermano de MIDAS**, no su clon: mismo ADN epistémico
-(DEC · GUARDAS · VEREDICTOS), distinto dominio. MIDAS busca *edge de trading*; esta mente
-**opera y gobierna la agencia de IA** con dominio sobre tres continentes (USA ×8 / EU ×6 / LATAM ×3).
+**Xe es el cerebro que opera y gobierna una agencia de IA global.** Es la **fusión total de las agencias de tres continentes** —ZENKAI (Europa), EtherLabX (LATAM) y Américas— unificadas y orquestadas por una sola mente que decide, cotiza, entrega y rinde cuentas con el criterio de sus fundadores. Todo el desarrollo de la agencia vive aquí.
 
-## Arranque
-1. Lee **`CLAUDE.md`** — la constitución operativa (gana sobre cualquier impulso del modelo).
-2. Lee **`.claude/megagoal.md`** — el plan en cola; solo **Fase 1** está activa.
-3. Pega **`PROMPT_ARRANQUE.md`** en Claude Code para construir la Fase 1.
+No es un asistente que responde. Es un sistema que **decide con acertación**: trae el conocimiento relevante, mide su coherencia y actúa solo cuando ese criterio lo respalda — o se detiene y pregunta cuando no. La confianza es un número que calcula, no una sensación.
+
+## Qué hace
+- **Discovery → cotización → onboarding** de clientes en las tres regiones, con pricing y criterio propios.
+- **Orquesta el portafolio** (asistentes de WhatsApp, ecommerce, web, automatización, video…) como una **librería de capacidades componible**: cada plan comercial es un bundle, cada nicho una plantilla.
+- **Crece en paralelo**: los socios construyen capacidades; un contrato común deja que la mente las absorba sin que se pisen.
+
+## Cómo piensa (lo que la hace seria, no un chatbot)
+1. **No inventa.** Si le falta criterio, se **bloquea y lo pide**. La que adivina deja de ser fiable.
+2. **Tres lentes regionales** bajo un núcleo de método compartido; si dos chocan, **escala — no promedia**.
+3. **Nunca toca dinero sin un humano.** Redacta cotizaciones, contratos y mensajes; cobrar, firmar y enviar exige OK humano.
+4. **Datos = verdad.** Stock, precios y métricas salen de la base, nunca de una alucinación.
 
 ## Estructura
-- `CLAUDE.md` — constitución (identidad, 3 continentes, protocolo de decisión §4, guardas).
-- `vault/` — conocimiento humano enlazado: DEC (`10_Decisions`), GUARDAS (`20_Guardas`), fundadores (`30_Founders`). Convenciones en `00_System/conventions.md`.
-- `.claude/megagoal.md` — norte + goal activo con condiciones falsables.
+- **`CLAUDE.md`** — la constitución operativa (gana sobre cualquier impulso del modelo).
+- **`vault/`** — el criterio humano enlazado: decisiones (`10_Decisions`), guardas (`20_Guardas`), fundadores y lentes (`30_Founders`), inventario y contrato (`00_System`).
+- **`.claude/megagoal.md`** — el plan por fases con condiciones de cierre falsables.
+- **`loop/`** — los lazos de operación probados (p. ej. el lazo Starter).
 
 ## Principios irrenunciables
-1. **No destruir** — la red son tests + GUARDAS.
-2. **No inventar** — hueco → bloqueo + pide decisión humana.
-3. **No mentir** — reporta el estado real.
+**No destruir** (la red son tests + guardas) · **No inventar** (hueco → bloqueo) · **No mentir** (reporta el estado real).
 
-> Construcción por fases (blueprint 80/20): Fundación → Hooks/Git → MCP → Subagentes → Loop agéntico. Autonomía al final, guardrails primero.
+## Estado
+**Fase 2** — el lazo Starter (discovery → cotización → entrega) probado en dry-run; consolidando el portafolio en capacidades componibles. Construcción por fases: criterio → contrato → producción → autonomía supervisada. *Guardrails primero, autonomía al final.*
+
+---
+*El método epistémico (decisiones falsables, guardas, veredictos) está probado en otros dominios; Xe lo aplica como proyecto propio para gobernar la agencia global.*
