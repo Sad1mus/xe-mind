@@ -38,3 +38,5 @@
 21. **¿Cuáles son los 10 mayores nichos/sectores de EE.UU.** a los que se ofrecerá la tecnología? → **Candidatos investigados con datos en [[nichos-us-candidatos]]** (2026-06-04). Falta que el humano ELIJA los 10 definitivos. Hoy solo existen 3 verticales (vet/dental/estética) tuneados a LATAM.
 22. **Socio `HaxelGG`:** ¿qué marca/región opera y cuál es su autoridad de decisión? (relacionado con #8, #19)
 23. **Inventario del portafolio:** ¿lista oficial de TODAS las capacidades del portafolio (las que componen Gold/Enterprise: video, multicanal web/social, integraciones, analytics, multi-agente…)? Para saber qué módulos faltan construir.
+24. **`zenkai-super-brain` (HaxelGG):** el socio ya tiene un "cerebro" propio. ¿Se **funde en Xe** (una sola mente) o coexiste separado? Si coexisten sin contrato compartido = divergencia garantizada. Decisión humana urgente.
+25. **Plataformas cripto/fintech** (`smc`, `ZAT`, `midas`): ¿entran al portafolio de la agencia como un vertical (fintech) o se quedan en dominio MIDAS? Hoy las trato como MIDAS-adjacent, fuera del core agencia.

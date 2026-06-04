@@ -31,6 +31,12 @@
 ## Verticales que existen (todos tuneados a LATAM, no US)
 Veterinaria · Dental · Estética (clinics) · Ecommerce ciclismo (ecommerce-ciclismo).
 
+## Repos del socio (HaxelGG) y plataformas adicionales
+- `GrupoJuanaSanchez` + `shopify-store-juana-sanchez` — cliente Shopify real → **capacidad Shopify** (alterna a MedusaJS). ✅
+- `Portafolio-Landing-Demos` — landings de demo → capacidad de **landing/marketing**.
+- `zenkai-super-brain` ("Super Brain made by Zenkai", HTML) — ⚠️ **el socio ya tiene un "cerebro" propio. Riesgo de divergencia con Xe** → reconciliar (hueco #24): ¿se funde en Xe o es separado?
+- **Fintech/cripto (MIDAS-adjacent, NO core agencia):** `smc-platform` (markets/TradingView), `ZAT` (fondo de inversión), `midas`/`midas-engine` (trading). Se anotan como adyacentes; **no entran al portafolio agencia sin criterio humano** — su hábitat es MIDAS.
+
 ## Veredicto del inventario
 - **Starter / Silver: ~80-90% existe** (agente + canal + panel + booking + web + pagos + diseño). Falta orquestación por la mente + tunear a US.
 - **Gold/Enterprise/Partner: gaps reales** — multicanal unificado, multi-agente, **video IA**, white-label. Varias "features Gold" (predicción/Jarvis/SuperBrain) eran marketing → verificar antes de venderlas.
