@@ -2,11 +2,13 @@
 
 Núcleo de método compartido (DEC/GUARDAS globales) + tres lentes que parametrizan ejecución y precio.
 
-| Lente | Región | Multiplicador | Conversión | Fundadores (roles) |
-|---|---|---|---|---|
-| **Américas** | USA / Canadá | **×8** | USD directo | Sebas · Jordy |
-| **EMEA** | Europa | **×6** | → ÷ 1,16 → EUR | Camilo |
-| **LATAM** | LATAM | **×3** | → × 3.570 → COP | Etherlabs |
+Mente paraguas = **Xe** (fusión de los socios — ver [[DEC-007]]).
+
+| Lente | Región | Marca | Fundadores (roles) |
+|---|---|---|---|
+| **Américas** | USA / Canadá | *por definir* | Sebas · Jordy |
+| **EMEA** | Europa | **ZENKAI** | Camilo |
+| **LATAM** | LATAM | **EtherLabX** | Etherlabs |
 
 > ⚠️ **Multiplicadores ×8/×6/×3 SUPERADOS por [[DEC-006]].** Eran el modelo derivado de ZENKAI v5. El pricing autoritativo de EtherLabX asigna **precios explícitos por plan/región** (Gold: USA $1,749 · EU €1,149 · LATAM ≈2,360,000 COP). Las lentes/roles siguen vigentes; el **precio lo gobierna [[DEC-006]]**, no el multiplicador.
 

@@ -6,6 +6,7 @@
 - [Convenciones del vault](00_System/conventions.md) — formato de DEC/GUARDA/VEREDICTO; reglas duras (falsabilidad, citar fuente, hueco≠invento)
 
 ## Decisiones (DEC)
+- [DEC-007 Arquitectura de marca — Xe](10_Decisions/DEC-007_Arquitectura-de-marca-Xe.md) — **aceptada (provisional):** Xe = mente paraguas (fusión socios); ZENKAI=Europa · EtherLabX=LATAM · Américas=por definir
 - [DEC-006 Pricing oficial EtherLabX](10_Decisions/DEC-006_Pricing-oficial-EtherLabX.md) — **AUTORITATIVA (aceptada)**: 5 planes (Starter $399/Silver $699/Gold $1,749/Enterprise $2,999/Partner desde $5,000) + onboarding por hitos + add-ons + Gold por región
 - [DEC-001 Modelo de pricing](10_Decisions/DEC-001_Modelo-de-pricing.md) — ⚠️ SUPERADA por DEC-006 (modelo ZENKAI ×8/×6/×3, histórico)
 - [DEC-002 Filosofía de cobro](10_Decisions/DEC-002_Filosofia-de-cobro.md) — ✅ aceptada (corroborada por DEC-006): suelo, por valor/ROI, MRR/LTV
