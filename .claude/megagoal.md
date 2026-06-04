@@ -1,63 +1,78 @@
-# MEGAGOAL — Xe: llegar al portafolio GOLD (el mejor producto)
+# MEGAGOAL — Xe: portafolio GOLD activo y funcional
 
-> Estructura de **cola**: el NORTE es Gold; solo **un goal activo** a la vez, con condiciones de cierre **falsables**; no se avanza sin VEREDICTO humano. Gold se alcanza por **composición de módulos** (no un monolito), porque los tiers son acumulativos (Starter⊂Silver⊂**Gold**) — ver [[DEC-008]].
+> **Cola, no monolito.** El NORTE es Gold; **un solo goal activo** a la vez; cada condición de cierre es **falsable y citada**; no se avanza sin **VEREDICTO humano**. A Gold se llega por **composición de módulos** al contrato — los tiers son acumulativos (Starter⊂Silver⊂**Gold**), ver [[DEC-008]]. Destilado del vault; lo no firmado va como 🚧 BLOQUEO, no se inventa ([[GUARDA-003]]).
 
 ---
 
-## 🥇 NORTE — Portafolio GOLD activo y funcional, en las 3 lentes, orquestado por Xe
+## 🥇 NORTE — Gold ([[DEC-006]], $1,749/mo), en las 3 lentes, orquestado por Xe
+Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · reporte semanal · soporte prioritario + optimización continua**. Plan estrella y de mayor margen.
 
-Gold ([[DEC-006]], $1,749/mo) = **Agentes IA ilimitados · Multicanal (web+WhatsApp+social) · Video IA incluido · Reporte semanal · Soporte prioritario + optimización continua.** Es el plan que elige 9 de 10 y el de mayor margen → es el objetivo comercial.
+**Gold = bundle de módulos** (estado del `inventario-portafolio.md`):
 
-**Gold = bundle de capacidades.** Descomposición vs el inventario real:
-
-| Módulo | Estado hoy | Para Gold |
+| Módulo | Estado | Para Gold |
 |---|---|---|
-| M1 Agente + WhatsApp + panel + booking | ✅ existe (clinics) | base |
+| M1 Agente + WhatsApp + panel + booking | ✅ existe · **validado VEREDICTO-001** | base |
 | M2 Web/storefront + diseño production-grade | ✅ existe (orvex/ecommerce) | base |
-| M3 Multi-agente / ilimitado por cliente | ❌ **gap** | Gold |
-| M4 Multicanal unificado (web + social, un cerebro) | ❌ **gap** | Gold |
-| M5 **Video IA** (HeyGen/Higgsfield) | ❌ **gap** | Gold |
-| M6 Reporte semanal / analytics ROI | ⚠️ parcial | Gold |
-| M7 Optimización continua (priority) | ⚠️ ops + criterio | Gold |
+| M3 Multi-agente / ilimitado por cliente | ⚠️ parcial (clinics: 1 agente/cliente) | **gap** |
+| M4 Multicanal unificado (web+social, un cerebro) | ❌ gap | **gap** |
+| M5 Video IA (HeyGen/Higgsfield) | ❌ gap | **gap** |
+| M6 Reporte semanal / analytics ROI | ⚠️ parcial (clinics) | **gap** |
+| M7 Optimización continua (priority) | ⚠️ ops + criterio sin definir | **gap** |
 
 ---
 
-## ✅ Fase 2→3 — CERRADA (VEREDICTO-001, 2026-06-04)
+## ✅ CERRADAS (no se re-abren)
 
-Lazo Starter **ejecutado de verdad**: el conector `integrations/clinics/` corrió `nueva_clinica.ts` contra una DB local de prueba → clínica "Sunrise Vet Clinic" creada y verificada (REST + psql). Guardas respetadas (GUARDA-001 con `--confirm`, GUARDA-005 sin hardcode, sin tocar prod ni el producto). **El contrato de capacidades está validado en ejecución real** → habilita la construcción paralela de módulos Gold. Ver `vault/40_Postmortems/VEREDICTO-001`.
-
-**Objetivo (cumplido):** llevar el lazo de dry-run a una **ejecución real** del bundle base (Starter→`basic`) que valida el contrato sobre el que se enchufan TODOS los módulos Gold.
-
-**Condición de cierre (falsable):** la mente hace discovery→cotización→propone execute; **un humano aprueba el cobro/creación** y el asistente queda vivo. "La mente lo hizo; yo solo firmé." Sin tocar lo que ya factura (strangler-fig); MCP read-first; `execute()` tras OK humano ([[GUARDA-001]]).
-
-**Progreso:** ✅ conector `integrations/clinics/` construido (cumple contrato; `oracle PASA`; dry-run cotiza+payload; `execute` frenado por GUARDA-001). Falta solo la **ejecución real**: `export CLINICS_REPO=<agente-clinicas>` + Supabase destino (el conectado es de HaxelGG/org Zenkai → **requiere su OK**) + correr `execute --confirm`.
-
-**Bloqueos humanos (no inventar — [[GUARDA-003]]):** designar Supabase destino (¿prueba o el de HaxelGG con su OK?). Prompt: `PROMPT_CONTINUAR.md`.
+- **Fase 1 — Fundación + criterio.** VEREDICTO humano 2026-06-04: DEC-002/004/005/006/007/008/009/010 aceptadas; GUARDA-001..005; identidad Xe; arquitectura monorepo-orquestador.
+- **Fase 2→3 — Contrato validado en ejecución real.** [[VEREDICTO-001]]: el conector `integrations/clinics/` orquestó `nueva_clinica.ts` y creó una clínica en DB local de prueba (verificado REST+psql); guardas respetadas. **El contrato de capacidades es real** → habilita construcción paralela.
 
 ---
-
-## ⏸ EN COLA hacia Gold (no empezar sin cerrar el anterior)
 
 ## ▶️ GOAL ACTIVO — Fase 4: construir los módulos-gap de Gold
-Cada uno al **contrato de capacidades** (manifest/dry_run/execute/oracle), probado con su oráculo, **sin romper lo que factura**. Jordy + HaxelGG se reparten módulos:
-  - 4a **Video IA** (M5) — el gap más visible de Gold. Definir proveedor (HeyGen/Higgsfield) y módulo.
-  - 4b **Multicanal unificado** (M4) — web + social sobre el mismo cerebro del agente.
-  - 4c **Multi-agente / ilimitado** (M3) — del 1-agente-por-cliente a N.
-  - 4d **Reporte semanal + analytics ROI** (M6).
-  - **Gate de honestidad:** verificar si "predicción / Jarvis / SuperBrain" (nombres de marketing ZENKAI) existen como tecnología real; si no, definirlos como módulo o **no venderlos**. La mente no vende lo que no existe.
-  - Cierre de cada submódulo: corre en dry_run + execute con OK + el oráculo confirma.
 
-- **Fase 5 — Componer y vender Gold.** Bundle Gold completo (M1–M7) + **un onboarding Gold real** con OK humano. Mapeo tier→plan para Gold (extender [[DEC-009]], hoy solo Starter→basic). Cierre = **Gold activo y funcional, cliente real aprobado**, replicable en las 3 lentes.
+**Objetivo:** convertir los gaps (M3, M4, M5, M6) en **módulos que cumplen el contrato** (`contrato-capacidades.md`: manifest·inputs·dry_run·execute·oracle), construibles **en paralelo** por Jordy y HaxelGG, **sin tocar/mover los productos** ni romper lo que factura.
 
-- **Fase 6 — Escala y autonomía supervisada.** Replicar Gold por nicho (los 10 US, una vez elegidos) y por lente regional; autonomía graduada bajo guardas.
+**Submódulos (cada uno cierra solo):**
+- **4a · Video IA (M5)** — el gap más visible y caro de Gold.
+- **4b · Multicanal unificado (M4)** — web + social sobre el mismo cerebro del agente.
+- **4c · Multi-agente / ilimitado (M3)** — de 1-agente-por-cliente a N.
+- **4d · Reporte semanal + analytics ROI (M6)**.
+
+**Condición de cierre de CADA submódulo (falsable):**
+1. Existe `packages/<modulo>/` con `manifest` + `inputs` validados.
+2. `dry_run()` corre y produce su salida **sin efectos irreversibles**.
+3. `execute()` corre **solo con `--confirm`** ([[GUARDA-001]]) y **sin cuentas hardcodeadas** ([[GUARDA-005]]).
+4. `oracle` **PASA** (registrado en `vault/40_Postmortems/`).
+5. Cero cambios en los repos de producto (verificable por `git status` de cada producto).
+
+**Fase 4 cierra cuando:** los 4 submódulos tienen su VEREDICTO `PASA`.
+
+**🚧 Bloqueos humanos de Fase 4 (la mente NO los inventa):**
+- **Proveedor de Video IA + costo** (M5) — afecta el suelo de costo ([[GUARDA-004]]). Sin esto, 4a se bloquea.
+- **Gate de honestidad:** ¿"predicción / Jarvis / SuperBrain" existen como tecnología o eran marketing ZENKAI? Si no existen, se definen como módulo o **no se venden** (la mente no vende lo que no existe).
+- **`zenkai-super-brain` (HaxelGG)** → ¿se funde en Xe? (hueco #24) — condiciona quién construye qué.
 
 ---
 
-## 🚧 Decisiones humanas que condicionan el camino a Gold (la mente NO las inventa)
-- Inventario oficial de capacidades Gold (hueco #23) — qué incluye exactamente "optimización continua".
-- Proveedor de Video IA y su costo (afecta suelo de costo, [[GUARDA-004]]).
-- Mapeo tier→plan para Silver/Gold (hueco #17; DEC-009 solo cubre Starter).
-- ¿"predicción/Jarvis/SuperBrain" existen o eran marketing? (gate Fase 4)
-- Migración de `zenkai-super-brain` (HaxelGG) a Xe (hueco #24).
+## ⏸ EN COLA (no empezar sin cerrar la anterior)
+
+- **Fase 5 — Componer y vender Gold.** Bundle Gold completo (M1–M7) + **un onboarding Gold real** con OK humano.
+  - **Condición de cierre (falsable):** la mente onboardea 1 cliente Gold real (discovery→cotización Gold→entrega multi-módulo), un humano aprueba el cobro sin corregir el número, replicable en las 3 lentes.
+  - **🚧 Bloqueo:** extender el mapeo tier→plan a **Gold** (hoy [[DEC-009]] solo cubre Starter→basic; hueco #17); inventario oficial de "optimización continua" (hueco #23).
+
+- **Fase 6 — Escala y autonomía supervisada.** Replicar Gold **por nicho** (los 10 US) y **por lente** (USA/EU/LATAM); autonomía graduada bajo guardas.
+  - **Condición de cierre (falsable):** Gold corriendo en ≥2 nichos y ≥2 lentes, con residencia respetada ([[GUARDA-002]]).
+  - **🚧 Bloqueo:** elegir los **10 nichos US** (candidatos con datos en `nichos-us-candidatos.md`, hueco #21); **consolidar cuentas** en la org compartida + plan Pro (el límite de 2 proyectos free de "Zenkai" ya lo exige — deuda de [[VEREDICTO-001]]).
+
+---
+
+## 🚧 Decisiones humanas que condicionan TODO el camino (resumen)
+1. Proveedor + costo de Video IA (Fase 4a).
+2. ¿predicción/Jarvis/SuperBrain reales o marketing? (gate Fase 4).
+3. `zenkai-super-brain` → ¿funde en Xe? (hueco #24).
+4. Mapeo tier→plan para Silver/Gold (hueco #17 — Fase 5).
+5. Inventario oficial de "optimización continua" Gold (hueco #23 — Fase 5).
+6. Los 10 nichos US definitivos (hueco #21 — Fase 6).
+7. Consolidar cuentas/plan Pro en org compartida (deuda VEREDICTO-001 — Fase 6).
 
 *Refinar con `/goal-queue`. Una fase = un VEREDICTO humano que la cierra. Gold se gana módulo a módulo, no de un salto.*
