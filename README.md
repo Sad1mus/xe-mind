@@ -15,11 +15,19 @@ No es un asistente que responde. Es un sistema que **decide con acertación**: t
 3. **Nunca toca dinero sin un humano.** Redacta cotizaciones, contratos y mensajes; cobrar, firmar y enviar exige OK humano.
 4. **Datos = verdad.** Stock, precios y métricas salen de la base, nunca de una alucinación.
 
-## Estructura
+## Estructura (monorepo Xe — empresa compartida, ver `vault/10_Decisions/DEC-010`)
+El cerebro vive en la raíz; el portafolio se anexa en workspaces con fronteras (cada app despliega independiente, residencia por región).
+```
+xe-mind/
+├── CLAUDE.md · vault/ · loop/ · .claude/   # 🧠 el cerebro (criterio + plan + lazos)
+├── packages/   # librería de capacidades componible (módulos reusables al contrato)
+├── apps/       # productos, anexados UNO A UNO (strangler-fig): clinics, ecommerce, gjs…
+└── infra/      # plantillas de deploy replicables (docker agentes + vercel web + residencia)
+```
 - **`CLAUDE.md`** — la constitución operativa (gana sobre cualquier impulso del modelo).
-- **`vault/`** — el criterio humano enlazado: decisiones (`10_Decisions`), guardas (`20_Guardas`), fundadores y lentes (`30_Founders`), inventario y contrato (`00_System`).
-- **`.claude/megagoal.md`** — el plan por fases con condiciones de cierre falsables.
-- **`loop/`** — los lazos de operación probados (p. ej. el lazo Starter).
+- **`vault/`** — criterio humano enlazado: decisiones (`10_Decisions`), guardas (`20_Guardas`), fundadores (`30_Founders`), sistema/contrato (`00_System`).
+- **`.claude/megagoal.md`** — el plan por fases (norte = Gold) con condiciones falsables.
+- **`packages/` · `apps/` · `infra/`** — el portafolio unificado, local-first y replicable.
 
 ## Principios irrenunciables
 **No destruir** (la red son tests + guardas) · **No inventar** (hueco → bloqueo) · **No mentir** (reporta el estado real).
