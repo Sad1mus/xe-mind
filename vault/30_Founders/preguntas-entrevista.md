@@ -20,3 +20,5 @@
 
 ## Sistemas
 11. n8n, CRM dedicado, Meta Ads: ¿**existen corriendo** o son parte de la oferta a vender? (hoy tratados como aspiracionales)
+12. **Desajuste tiers ↔ entrega (descubierto 2026-06-04):** el pricing habla de `Starter/Silver/Gold/Enterprise`, pero el pipeline real (`agente-clinicas/scripts/nueva_clinica.ts`) conoce planes `basic/growth/scale`. ¿Cuál es el **mapeo oficial** tier-comercial → plan-de-entrega? La mente NO lo inventa.
+13. El pipeline de entrega probado solo cubre **3 verticales** (veterinaria, dental, estética). ¿El paquete Starter se vende solo a estos verticales, o a cualquier PYME? Si es cualquiera, falta definir cómo se extiende el pipeline.
