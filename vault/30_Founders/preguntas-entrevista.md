@@ -35,6 +35,6 @@
 20. **"Xe" provisional:** ¿qué criterios deciden el nombre definitivo del paraguas, y cuándo?
 
 ## Portafolio y nichos (tras DEC-008)
-21. **¿Cuáles son los 10 mayores nichos/sectores de EE.UU.** a los que se ofrecerá la tecnología? La mente NO los inventa — los decide el humano, o la mente los **investiga con datos** (deep-research) y el humano elige. Hoy solo existen 3 verticales (vet/dental/estética) y tuneados a LATAM, no a EE.UU.
+21. **¿Cuáles son los 10 mayores nichos/sectores de EE.UU.** a los que se ofrecerá la tecnología? → **Candidatos investigados con datos en [[nichos-us-candidatos]]** (2026-06-04). Falta que el humano ELIJA los 10 definitivos. Hoy solo existen 3 verticales (vet/dental/estética) tuneados a LATAM.
 22. **Socio `HaxelGG`:** ¿qué marca/región opera y cuál es su autoridad de decisión? (relacionado con #8, #19)
 23. **Inventario del portafolio:** ¿lista oficial de TODAS las capacidades del portafolio (las que componen Gold/Enterprise: video, multicanal web/social, integraciones, analytics, multi-agente…)? Para saber qué módulos faltan construir.

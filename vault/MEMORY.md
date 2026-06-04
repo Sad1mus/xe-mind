@@ -4,6 +4,9 @@
 
 ## Sistema
 - [Convenciones del vault](00_System/conventions.md) — formato de DEC/GUARDA/VEREDICTO; reglas duras (falsabilidad, citar fuente, hueco≠invento)
+- [Inventario del portafolio](00_System/inventario-portafolio.md) — capacidad×repo: qué existe vs gaps; Starter/Silver ~90% existe, Gold+ con gaps (video, multicanal, white-label)
+- [Contrato de capacidades](00_System/contrato-capacidades.md) — interfaz manifest/inputs/dry_run/execute/oracle; habilita construcción paralela; lazo probado
+- Lazo Starter (dry-run ejecutable): `loop/starter_loop_dryrun.py` — discovery→quote→payload→STOP en GUARDA-001
 
 ## Decisiones (DEC)
 - [DEC-008 Norte — agencia global](10_Decisions/DEC-008_Norte-agencia-global.md) — **aceptada (norte):** repo = cerebro orquestador de agencia global; portafolio = librería componible; tiers acumulativos; plantillas 10 nichos US (sin definir aún)
@@ -23,4 +26,5 @@
 
 ## Fundadores / lentes regionales
 - [Lentes regionales](30_Founders/lentes-regionales.md) — ×8/×6/×3, roles, regla de discrepancia (escala, no promedia)
-- [Preguntas de entrevista](30_Founders/preguntas-entrevista.md) — 11 huecos de criterio que la mente NO rellena
+- [Preguntas de entrevista](30_Founders/preguntas-entrevista.md) — 23 huecos de criterio que la mente NO rellena
+- [Nichos US candidatos](30_Founders/nichos-us-candidatos.md) — 10 nichos investigados con datos (dental/medspa/vet ya servidos + HVAC/legal/real estate/...); CANDIDATOS, decisión humana
