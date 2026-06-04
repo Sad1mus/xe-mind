@@ -6,10 +6,18 @@
 - [Convenciones del vault](00_System/conventions.md) — formato de DEC/GUARDA/VEREDICTO; reglas duras (falsabilidad, citar fuente, hueco≠invento)
 
 ## Decisiones (DEC)
-_(vacío — se llenan en Fase 1 destilando de artefactos reales; ver `.claude/megagoal.md`)_
+- [DEC-001 Modelo de pricing](10_Decisions/DEC-001_Modelo-de-pricing.md) — precio = costo×multiplicador regional; fee = costo×1.5
+- [DEC-002 Filosofía de cobro](10_Decisions/DEC-002_Filosofia-de-cobro.md) — suelo de costo, por valor/ROI, dev+mantenimiento (MRR/LTV)
+- [DEC-003 Cap de fundadores](10_Decisions/DEC-003_Cap-fundadores-lanzamiento.md) — 1000/continente, precio de por vida; +37% al llenarse
+- [DEC-004 Flujo de discovery](10_Decisions/DEC-004_Flujo-de-discovery.md) — cuestionario mínimo (patrón 10 preguntas clínicas), time-to-value
+- [DEC-005 Estándar de entrega](10_Decisions/DEC-005_Estandar-de-entrega.md) — production-grade, impeccable como criterio de calidad
 
 ## Guardas
-_(vacío — Fase 1: dinero/firma · residencia regional · no-inventar)_
+- [GUARDA-001 Dinero y firma](20_Guardas/GUARDA-001_Dinero-y-firma.md) — redacta sí, cobrar/firmar/enviar requiere OK humano
+- [GUARDA-002 Residencia regional](20_Guardas/GUARDA-002_Residencia-regional.md) — datos regulados no salen de su región
+- [GUARDA-003 No inventar](20_Guardas/GUARDA-003_No-inventar.md) — hueco → bloqueo + preguntas-entrevista
+- [GUARDA-004 Suelo de costo](20_Guardas/GUARDA-004_Suelo-de-costo.md) — nunca cotizar bajo el costo base
 
 ## Fundadores / lentes regionales
-_(vacío — Fase 1: ×8/×6/×3, roles, regla de discrepancia, preguntas de entrevista)_
+- [Lentes regionales](30_Founders/lentes-regionales.md) — ×8/×6/×3, roles, regla de discrepancia (escala, no promedia)
+- [Preguntas de entrevista](30_Founders/preguntas-entrevista.md) — 11 huecos de criterio que la mente NO rellena
