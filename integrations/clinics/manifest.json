@@ -1,0 +1,17 @@
+{
+  "id": "clinics",
+  "nombre": "Asistente WhatsApp (clínicas)",
+  "producto_externo": "agente-clinicas",
+  "que_hace": "Onboarding de un cliente Starter de vertical clínica: discovery -> cotización -> asistente WhatsApp vivo.",
+  "tier": "Starter",
+  "plan_entrega": "basic",
+  "verticales": ["veterinaria", "dental", "estetica"],
+  "region_default": "LATAM",
+  "config_env": {
+    "CLINICS_REPO": "ruta al repo agente-clinicas (NO hardcodear). El conector invoca su scripts/nueva_clinica.ts.",
+    "comentario": "credenciales/Supabase ref viven en el .env de agente-clinicas, nunca aquí (GUARDA-005)."
+  },
+  "contrato": ["manifest", "inputs", "dry_run", "execute", "oracle"],
+  "guardas": ["GUARDA-001 (execute tras OK humano)", "GUARDA-002 (residencia)", "GUARDA-003 (no inventar)", "GUARDA-005 (sin hardcodeo)"],
+  "decisiones": ["DEC-004 discovery", "DEC-006 pricing", "DEC-009 Starter->basic"]
+}

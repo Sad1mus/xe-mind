@@ -8,6 +8,9 @@
 - [Contrato de capacidades](00_System/contrato-capacidades.md) — interfaz manifest/inputs/dry_run/execute/oracle; habilita construcción paralela; lazo probado
 - Lazo Starter (dry-run ejecutable): `loop/starter_loop_dryrun.py` — discovery→quote→payload→STOP en GUARDA-001
 
+## Integraciones (conectores a productos externos)
+- [clinics](../integrations/clinics/README.md) — conector a `agente-clinicas`; contrato cumplido (inputs/dry_run/execute/oracle); `oracle PASA`; execute tras OK humano + env CLINICS_REPO. Pendiente ejecución real (Supabase de HaxelGG → su OK)
+
 ## Decisiones (DEC)
 - [DEC-008 Norte — agencia global](10_Decisions/DEC-008_Norte-agencia-global.md) — **aceptada (norte):** repo = cerebro orquestador de agencia global; portafolio = librería componible; tiers acumulativos; plantillas 10 nichos US (sin definir aún)
 - [DEC-007 Arquitectura de marca — Xe](10_Decisions/DEC-007_Arquitectura-de-marca-Xe.md) — **aceptada (provisional):** Xe = mente paraguas (Jordy/Sad1mus + socio/HaxelGG); ZENKAI=Europa · EtherLabX=LATAM · Américas=por definir

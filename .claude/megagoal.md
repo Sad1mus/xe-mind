@@ -28,7 +28,9 @@ Gold ([[DEC-006]], $1,749/mo) = **Agentes IA ilimitados · Multicanal (web+Whats
 
 **Condición de cierre (falsable):** la mente hace discovery→cotización→propone execute; **un humano aprueba el cobro/creación** y el asistente queda vivo. "La mente lo hizo; yo solo firmé." Sin tocar lo que ya factura (strangler-fig); MCP read-first; `execute()` tras OK humano ([[GUARDA-001]]).
 
-**Bloqueos humanos (no inventar — [[GUARDA-003]]):** cablear MCP; envolver `nueva_clinica.ts` tras `execute()`. Prompt: `PROMPT_CONTINUAR.md`.
+**Progreso:** ✅ conector `integrations/clinics/` construido (cumple contrato; `oracle PASA`; dry-run cotiza+payload; `execute` frenado por GUARDA-001). Falta solo la **ejecución real**: `export CLINICS_REPO=<agente-clinicas>` + Supabase destino (el conectado es de HaxelGG/org Zenkai → **requiere su OK**) + correr `execute --confirm`.
+
+**Bloqueos humanos (no inventar — [[GUARDA-003]]):** designar Supabase destino (¿prueba o el de HaxelGG con su OK?). Prompt: `PROMPT_CONTINUAR.md`.
 
 ---
 
