@@ -22,3 +22,9 @@
 11. n8n, CRM dedicado, Meta Ads: ¿**existen corriendo** o son parte de la oferta a vender? (hoy tratados como aspiracionales)
 12. **Desajuste tiers ↔ entrega (descubierto 2026-06-04):** el pricing habla de `Starter/Silver/Gold/Enterprise`, pero el pipeline real (`agente-clinicas/scripts/nueva_clinica.ts`) conoce planes `basic/growth/scale`. ¿Cuál es el **mapeo oficial** tier-comercial → plan-de-entrega? La mente NO lo inventa.
 13. El pipeline de entrega probado solo cubre **3 verticales** (veterinaria, dental, estética). ¿El paquete Starter se vende solo a estos verticales, o a cualquier PYME? Si es cualquiera, falta definir cómo se extiende el pipeline.
+
+## Pricing oficial EtherLabX (tras DEC-006)
+14. **Precios locales de los tiers no-Gold:** el doc autoritativo solo publica el precio regional de **Gold** (USA $1,749 · EU €1,149 · LATAM ≈2,360,000 COP). ¿Cuáles son los de Starter/Silver/Enterprise/Partner por región? (la mente NO los inventa; hoy "se confirman por FX en la propuesta").
+15. **¿Sigue vigente el lanzamiento "1000 fundadores"** (ZENKAI) bajo EtherLabX, o se retira? El doc de EtherLabX no lo menciona (DEC-003 quedó en revisión).
+16. **Marca: ZENKAI vs EtherLabX.** El repo/constitución dice "ZENKAI/agencia"; el pricing autoritativo y el dominio (etherlabx.com) son **EtherLabX**. ¿Cuál es la marca oficial de la agencia? ¿Conviven o una reemplaza a la otra?
+17. **Mapeo onboarding-de-entrega:** el pipeline clínicas usa planes `basic/growth/scale`; EtherLabX vende `Starter/Silver/Gold/Enterprise/Partner`. ¿Cómo mapea cada tier comercial al plan técnico de entrega? (relacionado con hueco #12)

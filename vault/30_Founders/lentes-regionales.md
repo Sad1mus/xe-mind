@@ -8,7 +8,9 @@ Núcleo de método compartido (DEC/GUARDAS globales) + tres lentes que parametri
 | **EMEA** | Europa | **×6** | → ÷ 1,16 → EUR | Camilo |
 | **LATAM** | LATAM | **×3** | → × 3.570 → COP | Etherlabs |
 
-*Fuente: world/zenkai-pricing-v5-fee-descuentos.html. FX al 3-jun-2026 (USD/COP ≈ 3.570, EUR/USD ≈ 1.16).*
+> ⚠️ **Multiplicadores ×8/×6/×3 SUPERADOS por [[DEC-006]].** Eran el modelo derivado de ZENKAI v5. El pricing autoritativo de EtherLabX asigna **precios explícitos por plan/región** (Gold: USA $1,749 · EU €1,149 · LATAM ≈2,360,000 COP). Las lentes/roles siguen vigentes; el **precio lo gobierna [[DEC-006]]**, no el multiplicador.
+
+*Roles de fundador y FX: world/zenkai-pricing-v5. Pricing vigente: [[DEC-006]] (EtherLabX).*
 
 ## Regla de discrepancia (innegociable)
 Cuando dos lentes/fundadores chocan en una decisión, **la mente NO promedia ni elige sola**: expone el choque y **escala a humano** (compuerta BAJA del §4 de `CLAUDE.md`). Conciliar entre fundadores es decisión humana, nunca de la mente.

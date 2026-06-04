@@ -6,9 +6,10 @@
 - [Convenciones del vault](00_System/conventions.md) — formato de DEC/GUARDA/VEREDICTO; reglas duras (falsabilidad, citar fuente, hueco≠invento)
 
 ## Decisiones (DEC)
-- [DEC-001 Modelo de pricing](10_Decisions/DEC-001_Modelo-de-pricing.md) — precio = costo×multiplicador regional; fee = costo×1.5
-- [DEC-002 Filosofía de cobro](10_Decisions/DEC-002_Filosofia-de-cobro.md) — suelo de costo, por valor/ROI, dev+mantenimiento (MRR/LTV)
-- [DEC-003 Cap de fundadores](10_Decisions/DEC-003_Cap-fundadores-lanzamiento.md) — 1000/continente, precio de por vida; +37% al llenarse
+- [DEC-006 Pricing oficial EtherLabX](10_Decisions/DEC-006_Pricing-oficial-EtherLabX.md) — **AUTORITATIVA (aceptada)**: 5 planes (Starter $399/Silver $699/Gold $1,749/Enterprise $2,999/Partner desde $5,000) + onboarding por hitos + add-ons + Gold por región
+- [DEC-001 Modelo de pricing](10_Decisions/DEC-001_Modelo-de-pricing.md) — ⚠️ SUPERADA por DEC-006 (modelo ZENKAI ×8/×6/×3, histórico)
+- [DEC-002 Filosofía de cobro](10_Decisions/DEC-002_Filosofia-de-cobro.md) — ✅ aceptada (corroborada por DEC-006): suelo, por valor/ROI, MRR/LTV
+- [DEC-003 Cap de fundadores](10_Decisions/DEC-003_Cap-fundadores-lanzamiento.md) — ⚠️ EN REVISIÓN: lanzamiento ZENKAI no está en EtherLabX
 - [DEC-004 Flujo de discovery](10_Decisions/DEC-004_Flujo-de-discovery.md) — cuestionario mínimo (patrón 10 preguntas clínicas), time-to-value
 - [DEC-005 Estándar de entrega](10_Decisions/DEC-005_Estandar-de-entrega.md) — production-grade, impeccable como criterio de calidad
 

@@ -3,9 +3,11 @@ id: DEC-002
 titulo: Filosofía de cobro — suelo de costo, valor y recurrencia
 dueño: Jordy + socios (pendiente VEREDICTO)
 fuente: world/skill_pricing_agencias_ia.md
-estado: propuesta
+estado: aceptada
 lente: global
 ---
+> ✅ **Corroborada por [[DEC-006]]** (la sección "How we price" de EtherLabX confirma: por outcomes no por horas, sin fees ocultos, BYO keys en Enterprise).
+
 **Decisión:**
 - **Nunca** cobrar por debajo del suelo de costo recurrente (~$40–300/mes según herramientas).
 - **Nunca** cobrar por hora.

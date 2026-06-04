@@ -3,9 +3,11 @@ id: DEC-001
 titulo: Modelo de pricing — costo × multiplicador regional + fee
 dueño: Jordy + socios (pendiente VEREDICTO)
 fuente: world/zenkai-pricing-v5-fee-descuentos.html
-estado: propuesta
+estado: superada
 lente: global
 ---
+> ⚠️ **SUPERADA por [[DEC-006]]** (pricing oficial EtherLabX, 2026-06-04). El modelo ZENKAI v5 (costo×multiplicador + fee=costo×1.5) queda como histórico. EtherLabX asigna **precios explícitos por plan/región**, no derivados de un multiplicador. Se conserva esta nota por trazabilidad.
+
 **Decisión:** El precio standard de un plan = `costo USD × multiplicador regional` (Américas ×8 · EMEA ×6 · LATAM ×3, convertido a moneda local). El **fee único** = `costo × 1.5`. Tanto el fee como el precio mensual se **reducen con el compromiso** (ver DEC-003).
 
 **Porqué:** El precio se deriva del costo real (herramientas + infra), no se inventa — es justificable ante el cliente. El multiplicador por región ajusta a mercado/poder adquisitivo.
