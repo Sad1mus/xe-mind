@@ -15,19 +15,19 @@ No es un asistente que responde. Es un sistema que **decide con acertación**: t
 3. **Nunca toca dinero sin un humano.** Redacta cotizaciones, contratos y mensajes; cobrar, firmar y enviar exige OK humano.
 4. **Datos = verdad.** Stock, precios y métricas salen de la base, nunca de una alucinación.
 
-## Estructura (monorepo Xe — empresa compartida, ver `vault/10_Decisions/DEC-010`)
-El cerebro vive en la raíz; el portafolio se anexa en workspaces con fronteras (cada app despliega independiente, residencia por región).
+## Estructura (orquestador Xe — empresa compartida, ver `vault/10_Decisions/DEC-010`)
+Xe **integra los productos donde viven; NO los mueve ni los absorbe.** El cerebro y los conectores viven aquí; los productos quedan en sus repos.
 ```
 xe-mind/
 ├── CLAUDE.md · vault/ · loop/ · .claude/   # 🧠 el cerebro (criterio + plan + lazos)
-├── packages/   # librería de capacidades componible (módulos reusables al contrato)
-├── apps/       # productos, anexados UNO A UNO (strangler-fig): clinics, ecommerce, gjs…
-└── infra/      # plantillas de deploy replicables (docker agentes + vercel web + residencia)
+├── packages/      # librería de capacidades componible (módulos reusables al contrato)
+├── integrations/  # conectores a los productos externos (clinics, ecommerce, gjs…) — no los productos
+└── infra/         # plantillas de deploy replicables (docker agentes + vercel web + residencia)
 ```
 - **`CLAUDE.md`** — la constitución operativa (gana sobre cualquier impulso del modelo).
 - **`vault/`** — criterio humano enlazado: decisiones (`10_Decisions`), guardas (`20_Guardas`), fundadores (`30_Founders`), sistema/contrato (`00_System`).
 - **`.claude/megagoal.md`** — el plan por fases (norte = Gold) con condiciones falsables.
-- **`packages/` · `apps/` · `infra/`** — el portafolio unificado, local-first y replicable.
+- **`packages/` · `integrations/` · `infra/`** — el orquestador, local-first y replicable. Nada de cuentas hardcodeado (GUARDA-005) → migrar al Team/Org es trivial.
 
 ## Principios irrenunciables
 **No destruir** (la red son tests + guardas) · **No inventar** (hueco → bloqueo) · **No mentir** (reporta el estado real).

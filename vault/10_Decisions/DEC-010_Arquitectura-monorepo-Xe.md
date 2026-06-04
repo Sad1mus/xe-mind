@@ -1,32 +1,31 @@
 ---
 id: DEC-010
-titulo: Arquitectura unificada — monorepo Xe (empresa compartida), local-first
+titulo: Xe = orquestador nuevo que INTEGRA (no absorbe); monorepo, empresa compartida, local-first
 dueño: Jordy (Sad1mus) + HaxelGG — empresa compartida
 fuente: decisión humana directa (2026-06-04)
 estado: aceptada
 lente: global
 ---
-**Decisión:** Jordy y HaxelGG son **empresa compartida**. Todo se unifica en **un proyecto, "Xe"** (nombre provisional, [[DEC-007]]), como **monorepo con fronteras internas** (workspaces), NO un bloque indiferenciado:
+**Decisión:** Jordy y HaxelGG son **empresa compartida**. **Xe es un orquestador NUEVO que integra los productos existentes donde viven — NO los mueve ni los absorbe.** Lo que ya está creado (agente-clinicas, ecommerce-ciclismo, GJS, smc…) **se queda en su repo, intacto.** Xe se construye como **un proyecto local conectado a GitHub** (`xe-mind`), monorepo con fronteras internas:
 
 ```
-xe/
-├── mind/      # cerebro: vault (DEC/GUARDAS), CLAUDE.md, loop
-├── packages/  # librería de capacidades componible (módulos reusables)
-├── apps/      # productos, anexados UNO A UNO (strangler-fig)
-└── infra/     # plantillas de deploy replicables (docker agentes + vercel web + residencia)
+xe-mind/
+├── mind/ (raíz: vault, CLAUDE.md, loop)  # cerebro: criterio + plan + lazos
+├── packages/      # librería de capacidades componible (módulos reusables)
+├── integrations/  # CONECTORES a los productos externos (no los productos)
+└── infra/         # plantillas de deploy replicables (docker agentes + vercel web + residencia)
 ```
 
-**Construcción local primero**, como **plantilla replicable desde el día 1** (Docker + config por entorno). El deploy y la consolidación de cuentas se concretan después.
+**Construcción local primero**, como plantilla replicable desde el día 1 (Docker + config por entorno).
 
-**Propiedad (empresa compartida):** org compartida en los tres planos — GitHub Org + Supabase org **"Zenkai"** (mover el proyecto personal ahí) + Vercel **Team**. Ambos socios = admin. Resuelve el enredo `Sad1mus`/`HaxelGG`/`jordycapital`.
+**Migración futura al Team/Org = barata** por diseño: transferir repo (GitHub) + transferir proyectos (Supabase/Vercel, el `ref` no cambia) + cambiar `env`. **Condición:** nada de cuentas/refs hardcodeado ([[GUARDA-005]]).
 
-**Porqué:** empresa compartida elimina el riesgo de propiedad; el monorepo con workspaces da unidad **sin acoplar** (cada app despliega independiente); local-first es reversible.
+**Propiedad (empresa compartida):** org compartida — GitHub Org + Supabase org **"Zenkai"** + Vercel **Team**, ambos socios admin. Resuelve el enredo `Sad1mus`/`HaxelGG`/`jordycapital`.
 
-**Qué la invalidaría:** que el monorepo acople productos (un cambio rompe a otros) → volver a multi-repo; o que la residencia obligue a separar despliegues (sí obliga: ver abajo).
+**Porqué:** Xe orquestando-en-su-sitio evita el big-bang de mover repos que facturan; el monorepo da unidad al orquestador sin acoplar los productos (viven afuera).
 
-**Guardas que NO cambian aunque el código se unifique:**
-- **Residencia por región** ([[GUARDA-002]]): el panel EU (`eu-central-1`) NO se mueve a US. Código unificado ≠ datos unificados.
-- **Anexión incremental** (strangler-fig, [[DEC-008]]): los productos que facturan (clinics, ecommerce, GJS) entran uno a uno con su oráculo, **no big-bang**.
-- **No romper lo que factura.**
+**Qué la invalidaría:** que integrar-en-su-sitio resulte más frágil que absorber (poco probable); que la residencia obligue a separar despliegues (sí obliga).
 
-**Relaciones:** unifica bajo [[DEC-007]] (Xe paraguas) · realiza [[DEC-008]] (portafolio componible) · gobernada por [[GUARDA-002]].
+**Guardas:** residencia por región ([[GUARDA-002]]) · sin hardcodeo de cuentas ([[GUARDA-005]]) · no romper lo que factura · no mover lo creado.
+
+**Relaciones:** unifica bajo [[DEC-007]] · realiza [[DEC-008]] (portafolio componible) · gobernada por [[GUARDA-002]] y [[GUARDA-005]].

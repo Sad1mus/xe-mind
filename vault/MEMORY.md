@@ -11,7 +11,7 @@
 ## Decisiones (DEC)
 - [DEC-008 Norte — agencia global](10_Decisions/DEC-008_Norte-agencia-global.md) — **aceptada (norte):** repo = cerebro orquestador de agencia global; portafolio = librería componible; tiers acumulativos; plantillas 10 nichos US (sin definir aún)
 - [DEC-007 Arquitectura de marca — Xe](10_Decisions/DEC-007_Arquitectura-de-marca-Xe.md) — **aceptada (provisional):** Xe = mente paraguas (Jordy/Sad1mus + socio/HaxelGG); ZENKAI=Europa · EtherLabX=LATAM · Américas=por definir
-- [DEC-010 Arquitectura monorepo Xe](10_Decisions/DEC-010_Arquitectura-monorepo-Xe.md) — **aceptada:** empresa compartida; todo en un monorepo Xe (mind/packages/apps/infra), local-first, anexión incremental, residencia por región, org compartida
+- [DEC-010 Xe = orquestador que integra](10_Decisions/DEC-010_Arquitectura-monorepo-Xe.md) — **aceptada:** empresa compartida; Xe **integra los productos donde viven, NO los mueve**; monorepo (mind/packages/integrations/infra), local-first; migración al Team/Org trivial si no se hardcodea
 - [DEC-009 Mapeo tier→plan](10_Decisions/DEC-009_Mapeo-tier-plan-entrega.md) — **aceptada (parcial):** Starter→`basic`; resto del mapeo pendiente
 - [DEC-006 Pricing oficial EtherLabX](10_Decisions/DEC-006_Pricing-oficial-EtherLabX.md) — **AUTORITATIVA (aceptada)**: 5 planes (Starter $399/Silver $699/Gold $1,749/Enterprise $2,999/Partner desde $5,000) + onboarding por hitos + add-ons + Gold por región
 - [DEC-001 Modelo de pricing](10_Decisions/DEC-001_Modelo-de-pricing.md) — ⚠️ SUPERADA por DEC-006 (modelo ZENKAI ×8/×6/×3, histórico)
@@ -25,6 +25,7 @@
 - [GUARDA-002 Residencia regional](20_Guardas/GUARDA-002_Residencia-regional.md) — datos regulados no salen de su región
 - [GUARDA-003 No inventar](20_Guardas/GUARDA-003_No-inventar.md) — hueco → bloqueo + preguntas-entrevista
 - [GUARDA-004 Suelo de costo](20_Guardas/GUARDA-004_Suelo-de-costo.md) — nunca cotizar bajo el costo base
+- [GUARDA-005 Sin hardcodeo de cuentas](20_Guardas/GUARDA-005_Sin-hardcodeo-de-cuentas.md) — IDs/refs/keys solo en env/config → Xe portable, migración trivial
 
 ## Fundadores / lentes regionales
 - [Lentes regionales](30_Founders/lentes-regionales.md) — ×8/×6/×3, roles, regla de discrepancia (escala, no promedia)
