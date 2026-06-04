@@ -33,3 +33,8 @@
 18. **¿El pricing de DEC-006 es compartido por las 3 marcas** (Xe/ZENKAI/EtherLabX) o cada marca regional tiene el suyo? El doc está en etherlabx.com (ahora = LATAM) pero lista 3 continentes — ambiguo.
 19. **Marca de Américas (USA/Canadá):** ¿nombre? (Sebas + Jordy)
 20. **"Xe" provisional:** ¿qué criterios deciden el nombre definitivo del paraguas, y cuándo?
+
+## Portafolio y nichos (tras DEC-008)
+21. **¿Cuáles son los 10 mayores nichos/sectores de EE.UU.** a los que se ofrecerá la tecnología? La mente NO los inventa — los decide el humano, o la mente los **investiga con datos** (deep-research) y el humano elige. Hoy solo existen 3 verticales (vet/dental/estética) y tuneados a LATAM, no a EE.UU.
+22. **Socio `HaxelGG`:** ¿qué marca/región opera y cuál es su autoridad de decisión? (relacionado con #8, #19)
+23. **Inventario del portafolio:** ¿lista oficial de TODAS las capacidades del portafolio (las que componen Gold/Enterprise: video, multicanal web/social, integraciones, analytics, multi-agente…)? Para saber qué módulos faltan construir.

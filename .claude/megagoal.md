@@ -5,7 +5,7 @@
 ---
 
 ## 🧭 NORTE (visión fija — no es el goal activo)
-Una mente, **tres lentes regionales** (USA ×8 / EU ×6 / LATAM ×3), que **absorbe** el tooling de la agencia bajo un estándar único y corre el **onboarding Gold punta a punta**, autónoma salvo dinero/firma. Hermana de MIDAS; mismo ADN (DEC/GUARDAS/VEREDICTOS), distinto dominio.
+**Una agencia global orquestada por la mente (Xe)** — ver [[DEC-008]]. Mente paraguas (Xe = Jordy `Sad1mus` + socio `HaxelGG`) sobre marcas regionales (ZENKAI/Europa · EtherLabX/LATAM · Américas). Objetivo: **todo el portafolio activo y funcional como librería de capacidades componible** (tiers acumulativos Starter⊂Silver⊂Gold⊂Enterprise⊂Partner), entregado vía **plantillas a los 10 mayores nichos de EE.UU.** La mente **absorbe** el tooling existente (orvex + clínicas) bajo un estándar único, autónoma salvo dinero/firma. Hermana de MIDAS; mismo ADN, distinto dominio.
 
 ---
 
