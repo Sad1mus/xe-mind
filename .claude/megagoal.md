@@ -47,6 +47,17 @@ Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · r
 
 **Fase 4 cierra cuando:** los 4 submódulos tienen su VEREDICTO `PASA`.
 
+### 📍 Estado del portafolio (hallazgo 2026-06-04)
+Gold está **~50% construido**: la base (M1 ✅ validado + M2 ✅) y M6/M7 a medias **ya están**; faltan los tres que **definen Gold y justifican su precio** — **M5 Video IA, M4 Multicanal, M3 Multi-agente**. Por nicho: **Starter = ~100%** para dental/med-spa/vet (verticales probados); **Gold = ~mitad**. → No vender Gold por ads hasta cerrar M5+M4 (la mitad premium que falta). Ver `nichos-us-candidatos.md`.
+
+### ▶️ ARRANQUE MAÑANA (2026-06-05) — terminación del portafolio
+Orden propuesto, de mayor a menor impacto en "Gold real":
+1. **M5 Video IA** — el gap que más diferencia Gold. ⚠️ **bloqueado** hasta decidir proveedor+costo (ver abajo). Si no hay decisión, empezar por →
+2. **M4 Multicanal unificado** o **M3 Multi-agente** — no dependen de proveedor externo; se pueden arrancar al contrato ya.
+3. **M6 Reporte/analytics** — el más cercano a "listo" (clinics ya tiene base).
+
+🔀 **Decisión que abre mañana (la mente NO la toma):** ¿**construir Gold completo antes de vender** (camino 2), o **vender Starter/Silver ya en paralelo** sobre los verticales probados mientras se construye Gold (camino 1)? Recomendación previa: camino 1 para caja+datos CAC:LTV, camino 2 en paralelo.
+
 **🚧 Bloqueos humanos de Fase 4 (la mente NO los inventa):**
 - **Proveedor de Video IA + costo** (M5) — afecta el suelo de costo ([[GUARDA-004]]). Sin esto, 4a se bloquea.
 - **Gate de honestidad:** ¿"predicción / Jarvis / SuperBrain" existen como tecnología o eran marketing ZENKAI? Si no existen, se definen como módulo o **no se venden** (la mente no vende lo que no existe).
