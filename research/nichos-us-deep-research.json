@@ -1,0 +1,399 @@
+{
+  "summary": "Deep research harness — fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report.",
+  "agentCount": 109,
+  "logs": [
+    "Q: ¿Cuáles son los mejores nichos de pequeñas y medianas empresas (SMB) en Estados …",
+    "Decomposed into 6 angles: broad/primary — best local-service niches for agencies, CAC / CPC by vertical (acquisition cost), LTV / churn of recurring clients (retained value), product fit + conversion + sales cycle, saturation + compliance (contrarian/practitioner), market size / business density (reachable TAM)",
+    "CAC / CPC by vertical (acquisition cost): 6 results",
+    "broad/primary — best local-service niches for agencies: 6 results",
+    "LTV / churn of recurring clients (retained value): 6 results",
+    "LTV / churn of recurring clients (retained value): 3 novel (3 filtered)",
+    "product fit + conversion + sales cycle: 6 results",
+    "product fit + conversion + sales cycle: 3 novel (3 filtered)",
+    "market size / business density (reachable TAM): 6 results",
+    "market size / business density (reachable TAM): 5 novel (1 filtered)",
+    "saturation + compliance (contrarian/practitioner): 6 results",
+    "saturation + compliance (contrarian/practitioner): 3 novel (3 filtered)",
+    "Fetched 26 sources → 103 claims → verifying top 25",
+    "\"On Google Ads, attorneys/legal ($131.63), real est…\": 3-0 ✓",
+    "\"Average Google Ads CPC varies sharply by vertical:…\": 2-1 ✓",
+    "\"Auto repair/service (14.67%), physicians (11.62%),…\": 2-1 ✓",
+    "\"For US Google Search Ads, legal/attorney services …\": 3-0 ✓",
+    "\"Dental services show a strong paid-ads unit econom…\": 3-0 ✓",
+    "\"Automotive repair/service and physicians offer the…\": 0-3 ✗",
+    "\"Home & home improvement (covers HVAC/plumbing) car…\": 0-3 ✗",
+    "\"Agencies selling SMB clients only 1 product retain…\": 0-3 ✗",
+    "\"62% of SMB clients not upsold within the first 3 m…\": 1-2 ✗",
+    "\"Vertical-specific (niche-specialized) marketing pr…\": 0-3 ✗",
+    "\"There are 179,584 dentist businesses in the US as …\": 3-0 ✓",
+    "\"There are 107,751 gym, health & fitness club busin…\": 2-1 ✓",
+    "\"Meta Ads cost per lead in 2026 varies widely by ve…\": 1-2 ✗",
+    "\"Within Home Services, lead costs differ sharply by…\": 0-3 ✗",
+    "\"HVAC has by far the lowest cost per lead of any lo…\": 2-1 ✓",
+    "\"Legal Services carries one of the highest paid CPL…\": 3-0 ✓",
+    "\"Healthcare paid CPL is $401 (blended $361), placin…\": 0-3 ✗",
+    "\"On Google Ads in 2025, cost-per-lead varies widely…\": 3-0 ✓",
+    "\"Meta/Facebook delivers far cheaper leads than Goog…\": 1-2 ✗",
+    "\"Customer acquisition cost for SMB targets (1–50 em…\": 0-3 ✗",
+    "\"Healthcare is among the lowest-CPL verticals, with…\": 0-3 ✗",
+    "\"Legal Services have the highest-intent but very ex…\": 1-2 ✗",
+    "\"Facebook/Instagram (Meta) ads average $21.98 CPL v…\": 2-1 ✓",
+    "\"For an SEO/digital marketing agency, the average c…\": 0-3 ✗",
+    "\"Marketing agencies on a retainer model have 1.6% m…\": 0-3 ✗",
+    "Verify done: 25 claims → 11 confirmed, 14 killed"
+  ],
+  "result": {
+    "question": "¿Cuáles son los mejores nichos de pequeñas y medianas empresas (SMB) en Estados Unidos para que una agencia de IA adquiera clientes RENTABLEMENTE mediante campañas pagadas (Meta Ads / Google Ads), vendiendo un paquete \"Gold\" de ~$1,749/mes + onboarding único ~$3,500 (asistente de IA por WhatsApp/voz, multicanal web+social, video IA, agendamiento de citas, reportes)?\n\nRankéalos por UNIDAD ECONÓMICA de adquisición por ads, no solo por disposición a pagar. Para cada nicho candidato evalúa con datos:\n- CAC estimado vía paid ads (costo por lead y costo por cliente cerrado en ese vertical)\n- CPC / competencia publicitaria del nicho en Meta/Google (qué tan caros son los clics)\n- LTV y churn típicos de clientes de ese vertical para servicios recurrentes\n- Tasa de conversión lead→cliente y ciclo de venta\n- Tamaño del mercado SMB en EE.UU. y densidad de negocios alcanzables\n- Fit con el producto (necesidad real de asistente 24/7 / booking / leads) y con compliance (HIPAA en salud, etc.)\n- Saturación competitiva (cuántas agencias de IA ya atacan ese nicho)\n\nContexto: la agencia ya entrega con éxito en LATAM a clínicas veterinarias, dentales y estéticas (asistente WhatsApp). Quiere replicar el modelo de campañas pagadas en EE.UU. Considera tanto verticales de servicios locales (HVAC/plomería, dental, med spa, legal, real estate, restaurantes, automotriz, fitness, salones) como otros que el análisis revele. Entrega un ranking de ~10 nichos con su lógica de unidad económica y una recomendación de cuáles 3-5 atacar primero por mejor relación CAC:LTV.",
+    "summary": "Para una agencia de IA que vende un paquete recurrente (~$1,749/mes + ~$3,500 onboarding) a SMBs en EE.UU. vía Meta/Google Ads, la unidad económica de adquisición varía drásticamente por nicho: los datos de benchmarks (WordStream/LocaliQ 2025-2026) muestran un spread de >4x en costo por lead, donde verticales de servicios profesionales caros (legal, real estate) sufren un doble castigo —los clics más caros (legal $8.58-$9.87 CPC, CPL $131-$784) Y las peores tasas de conversión (legal 5.09%, real estate 3.28%)— mientras que HVAC/home services, dental, auto repair y physicians ofrecen la mejor relación costo:conversión. HVAC destaca con el CPL más bajo de servicios locales (~$92-$115 mezclado) y dental combina CPC de ~$8 con alta conversión (~10.67%, CPL ~$73-$84); auto repair tiene la conversión más alta (14.67%) y CPL más bajo (~$28.50). Meta es estructuralmente más barato por lead que Google Search (~$22-$28 vs ~$67-$70 cross-industry), aunque con menor intención de compra. Recomendación: atacar primero HVAC/plomería, dental, med spa/clínicas (extensión natural del éxito LATAM de la agencia en veterinarias/dentales/estéticas), auto repair y physicians/healthcare local —todos con CAC bajo, alta densidad de negocios (dental ~179,584; fitness ~107,751) y fit fuerte con asistente 24/7 + booking— evitando legal y real estate como adquisición primaria por su CAC estructuralmente alto.",
+    "findings": [
+      {
+        "claim": "Existe un spread de >4x en costo por lead entre nichos SMB en Google Ads: legal/abogados es el más caro ($131.63 CPL) y real estate ($100.48) y home improvement/HVAC ($90.92) caros, mientras restaurantes ($30.27), auto repair ($28.50) y mascotas ($31.82) son los más baratos. Este spread define directamente el CAC por nicho.",
+        "confidence": "high",
+        "sources": [
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks",
+          "https://www.flyweel.co/blog/lead-gen-cpl-cac-benchmark-index-2025"
+        ],
+        "evidence": "Cifras verificadas verbatim contra WordStream 2025 (3-0). El ratio $131.63/$28.50 = 4.6x. Corroborado por LocaliQ, AdBacklog, Flyweel republicando el mismo dataset (millones en ad spend, miles de cuentas). Caveat: HVAC standalone suele citarse más alto (~$104) que el bundle Home & Home Improvement.",
+        "vote": "3-0"
+      },
+      {
+        "claim": "Legal y real estate sufren un doble castigo de adquisición: tienen los clics/CPL más caros Y las peores tasas de conversión (legal 5.09% CVR + $131.63 CPL + $8.58-$9.87 CPC; real estate 3.28% CVR + $100.48 CPL), haciendo su CAC estructuralmente el más alto y desfavorable para adquisición primaria.",
+        "confidence": "high",
+        "sources": [
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks",
+          "https://localiq.com/blog/search-advertising-benchmarks/",
+          "https://firstpagesage.com/reports/average-cost-per-lead-by-industry/"
+        ],
+        "evidence": "Tres claims independientes (votos 2-1, 3-0, 3-0) confirman: legal = CPC más caro de cualquier vertical ($8.58 WordStream / $9.87 LocaliQ) Y CPL más alto ($131.63), con CVR baja 5.09%. First Page Sage da CPL legal pagado de $784 (blended $649), el más alto de servicios locales. Real estate combina 4º CPL más alto con CVR de solo 3.28%.",
+        "vote": "3-0"
+      },
+      {
+        "claim": "Auto repair (14.67% CVR, $28.50 CPL), physicians/healthcare (11.62% CVR, $56.83 CPL) y dental (9.08-10.67% CVR, $72.97-$83.93 CPL) tienen el mejor perfil de unidad económica de adquisición: alta conversión y CPL bajo-medio. Auto repair es #1 en conversión y el CPL más bajo entre servicios.",
+        "confidence": "high",
+        "sources": [
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks",
+          "https://localiq.com/blog/search-advertising-benchmarks/",
+          "https://www.flyweel.co/blog/lead-gen-cpl-cac-benchmark-index-2025"
+        ],
+        "evidence": "Verificado 3-0 y 2-1 contra WordStream y LocaliQ. Auto Repair 14.67% es la conversión más alta de las 23 industrias; physicians 11.62%; dental 9.08-10.67%. Caveat: animals/pets (13.07%) y education (11.38%) también superan a dental; dental no es estrictamente top-3 en conversión pero su CPL bajo-medio + alta intención lo mantiene fuerte.",
+        "vote": "2-1"
+      },
+      {
+        "claim": "HVAC tiene el CPL más bajo de cualquier vertical de servicios locales: ~$92 mezclado / $115 pagado, favoreciendo directamente la unidad económica de adquisición para una agencia de IA que venda asistente/booking 24/7.",
+        "confidence": "medium",
+        "sources": [
+          "https://firstpagesage.com/reports/average-cost-per-lead-by-industry/"
+        ],
+        "evidence": "First Page Sage 2026 lista HVAC $115 pagado / $92 blended, vs Real Estate $448, Legal $649, Construction $227. Corroborado por SearchLight (~$104 CPL HVAC/plomería sobre $14.9M de spend en 816 contratistas) y LocaliQ (~$127.74). Caveat (voto 2-1): 'por mucho el más bajo' es parcialmente artefacto de cobertura incompleta del reporte —plomería ($55-$129) puede ser comparable o más barata, y el reporte omite roofing/landscaping standalone.",
+        "vote": "2-1"
+      },
+      {
+        "claim": "Dental muestra fuerte perfil de adquisición pagada: ~$8.00 CPC con 10.67% de conversión = $72.97 CPL, por debajo de al menos 5 verticales profesionales (legal, real estate, business services, industrial, finance).",
+        "confidence": "high",
+        "sources": [
+          "https://localiq.com/blog/search-advertising-benchmarks/",
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks"
+        ],
+        "evidence": "Verificado 3-0 contra LocaliQ 2026 ($8.00 CPC, 10.67% CVR, $72.97 CPL). WordStream 2025 corrobora con dental CVR 9.08% y CPC $7.85-$8.00. Caveat: el 10.67% es conversión a-nivel-click (lead), no tasa de cierre lead→cliente que importa para el CAC completo de la agencia.",
+        "vote": "3-0"
+      },
+      {
+        "claim": "Meta (Facebook/Instagram) es estructuralmente más barato por lead que Google Search: ~$21.98-$27.66 CPL vs ~$66.69-$70.11 CPL cross-industry, aproximadamente un tercio del costo, lo que favorece campañas Meta para adquisición de volumen.",
+        "confidence": "medium",
+        "sources": [
+          "https://axzlead.com/blog/average-cost-per-lead-by-industry",
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks"
+        ],
+        "evidence": "Voto 2-1; rastreado a benchmarks de WordStream (Meta CPC $1.92 vs Google $5.26). Search Engine Land, LocaliQ y Stackmatix confirman la dirección. Caveat importante: el $21.98 es vintage 2024; 2025 subió ~21% a $27.66 (brecha estrechándose). CPL no es CAC —leads de Meta son de menor intención que Google Search (alta intención), así que menor CPL no garantiza menor costo-por-cliente-cerrado.",
+        "vote": "2-1"
+      },
+      {
+        "claim": "El mercado SMB dental en EE.UU. es de ~179,584 negocios (2026), definiendo un TAM grande y alcanzable de alta densidad para el vertical dental.",
+        "confidence": "high",
+        "sources": [
+          "https://www.ibisworld.com/united-states/number-of-businesses/dentists/1557/"
+        ],
+        "evidence": "IBISWorld 2026 verbatim: 179,584 negocios dentales (+1.0% vs 2025), verificado 3-0 vía WebFetch. Corroborado por DentistEmailList (>178,000). Caveat: Census reporta 135,333 establecimientos (solo empleadores); IBISWorld incluye no-empleadores/solo-practicantes, defendible para framing SMB-TAM.",
+        "vote": "3-0"
+      },
+      {
+        "claim": "El mercado gym/fitness en EE.UU. es de ~107,751 negocios (2026), un TAM de seis cifras alcanzable para el vertical fitness con necesidad de booking/asistente.",
+        "confidence": "high",
+        "sources": [
+          "https://www.ibisworld.com/united-states/number-of-businesses/gym-health-fitness-clubs/1655/"
+        ],
+        "evidence": "IBISWorld 2026 verbatim: 107,751 negocios (+1.1% vs 2025), verificado 2-1. Consistente con ~114,370 (2024 IBISWorld) y ~77M miembros (HFA/Statista). Fitness tiene fit fuerte con agendamiento de citas y asistente 24/7.",
+        "vote": "2-1"
+      },
+      {
+        "claim": "Restaurantes y auto repair tienen el CPC más barato ($2.05 y ~$2.53-$3.90 respectivamente) vs legal ($8.58) y dental/home improvement ($7.85), reduciendo el presupuesto de ads necesario por lead en esos nichos de bajo costo.",
+        "confidence": "medium",
+        "sources": [
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks"
+        ],
+        "evidence": "Voto 2-1; CPC verificado verbatim contra WordStream (legal $8.58, dental $7.85, home improvement $7.85, real estate $2.53, restaurantes $2.05, finance $3.46). Caveat: CPC bajo solo no determina CPL —depende también de la tasa de conversión; restaurantes tienen CPC barato pero menor recurrencia/fit con el producto de la agencia.",
+        "vote": "2-1"
+      },
+      {
+        "claim": "Fit producto-nicho: los verticales con mejor CAC (HVAC/plomería, dental, med spa/clínicas, auto repair, physicians) son también los de mayor necesidad real de asistente 24/7, booking y captura de leads —y dental/estética/veterinaria son extensión directa del éxito probado de la agencia en LATAM.",
+        "confidence": "medium",
+        "sources": [
+          "https://www.wordstream.com/blog/2025-google-ads-benchmarks",
+          "https://localiq.com/blog/search-advertising-benchmarks/",
+          "https://www.ibisworld.com/united-states/number-of-businesses/dentists/1557/"
+        ],
+        "evidence": "Síntesis de los hallazgos de CAC bajo (auto repair, physicians, dental, HVAC) + densidad de mercado (dental 179K) + el contexto de la agencia (ya entrega a clínicas veterinarias/dentales/estéticas en LATAM con asistente WhatsApp). Healthcare/dental requiere consideración HIPAA en compliance. Caveat: no hay datos verificados de LTV/churn por vertical (los claims de Vendasta y de lifespan de agencias fueron refutados).",
+        "vote": "N/A-synthesis"
+      }
+    ],
+    "caveats": "1) NINGÚN claim de LTV/churn por vertical sobrevivió la verificación adversarial —todos los datos de Vendasta (retención por número de productos, ventana de upsell de 3 meses, ventaja vertical 15%) y de lifespan de agencias (41 meses, churn 1.6% retainer vs 4.2% project) fueron REFUTADOS. Por tanto el ranking se apoya solo en el lado del CAC/adquisición, NO en la relación CAC:LTV completa; la mitad LTV de la pregunta original queda sin evidencia confirmada. 2) Los benchmarks de CPL/CPC son promedios agregados de cuenta (WordStream/LocaliQ), no CAC garantizado para esta oferta específica —el CPL es solo un input del CAC, que también depende de la tasa de cierre lead→cliente (no benchmarkeada por vertical) y del ciclo de venta. 3) Datos mezclan vintages 2024/2025/2026; Meta CPL subió ~21% año-a-año (brecha con Google estrechándose) y el CPL 2026 tendió a la baja por primera vez en 5 años. 4) CPL de Meta refleja leads de menor intención que Google Search; menor CPL no implica menor costo-por-cliente-cerrado. 5) HVAC 'por mucho el más bajo' es parcialmente artefacto de cobertura incompleta del reporte First Page Sage. 6) Cifras de CPL legal divergen enormemente entre fuentes ($131 WordStream vs $784 First Page Sage) según área de práctica —no tratar como número único. 7) Compliance HIPAA aplica a healthcare/dental/med spa y debe evaluarse para el asistente de IA.",
+    "openQuestions": [
+      "¿Cuál es el LTV y churn real por vertical para servicios recurrentes de agencia de IA? Ningún claim sobre esto sobrevivió la verificación, dejando la mitad de la relación CAC:LTV sin datos confirmados.",
+      "¿Cuál es la tasa de cierre lead→cliente y el ciclo de venta específicos por nicho para esta oferta ($1,749/mes + $3,500 onboarding)? Los benchmarks dan conversión a-nivel-click, no cierre de venta del paquete.",
+      "¿Cuál es el nivel de saturación competitiva (cuántas agencias de IA ya atacan cada nicho en EE.UU.)? No se verificó ningún dato sobre densidad de competidores por vertical.",
+      "¿Cómo difiere el CPL/CAC en Meta específicamente por vertical SMB (no solo el promedio cross-industry)? Los claims de CPL Meta por nicho (Adamigo) fueron mayormente refutados, dejando incierta la economía de Meta para HVAC/dental/med spa puntualmente."
+    ],
+    "refuted": [
+      {
+        "claim": "Automotive repair/service and physicians offer the cheapest leads among service verticals due to high conversion rates (15.51% and 12.43%), at $29.96 and $40.04 cost per lead respectively.",
+        "vote": "0-3",
+        "source": "https://localiq.com/blog/search-advertising-benchmarks/"
+      },
+      {
+        "claim": "Home & home improvement (covers HVAC/plumbing) carries high paid-search CAC: $8.33 CPC and $90.92 cost per lead, second only to legal among the home-services-adjacent verticals.",
+        "vote": "0-3",
+        "source": "https://localiq.com/blog/search-advertising-benchmarks/"
+      },
+      {
+        "claim": "Agencies selling SMB clients only 1 product retain only ~30% of those clients after 2 years, while selling 4 products raises 2-year retention to ~80% — i.e., LTV/retention for SMB recurring services scales sharply with product bundle breadth.",
+        "vote": "0-3",
+        "source": "https://www.vendasta.com/blog/vendasta-client-churn-study/"
+      },
+      {
+        "claim": "62% of SMB clients not upsold within the first 3 months churned within 2 years, and the 3-month mark is the highest-impact window for upselling — implying the early onboarding/upsell period is decisive for recurring-service LTV.",
+        "vote": "1-2",
+        "source": "https://www.vendasta.com/blog/vendasta-client-churn-study/"
+      },
+      {
+        "claim": "Vertical-specific (niche-specialized) marketing providers retain SMB clients 15% better after 2 years than non-vertical sellers, supporting a niche-focused agency strategy.",
+        "vote": "0-3",
+        "source": "https://www.vendasta.com/blog/vendasta-client-churn-study/"
+      },
+      {
+        "claim": "Meta Ads cost per lead in 2026 varies widely by vertical, with Legal Services the most expensive at ~$72.40 average and Healthcare/dental at ~$41.60, Home Services at $34-$45.50, Real Estate at $51.90, and Fitness at $29.70.",
+        "vote": "1-2",
+        "source": "https://www.adamigo.ai/blog/meta-ads-cost-per-lead-benchmarks-industry-2026"
+      },
+      {
+        "claim": "Within Home Services, lead costs differ sharply by trade: Roofing/HVAC/Air Conditioning run $115–$116.75+ per lead, while Plumbing/Heating is $72.97, Pest Control $70.11, and Landscaping $58.56 on Meta Ads.",
+        "vote": "0-3",
+        "source": "https://www.adamigo.ai/blog/meta-ads-cost-per-lead-benchmarks-industry-2026"
+      },
+      {
+        "claim": "Healthcare paid CPL is $401 (blended $361), placing medical/clinic SMB lead acquisition in the mid-high cost band — materially more expensive than HVAC and relevant to the agency's dental/med-spa/clinic focus.",
+        "vote": "0-3",
+        "source": "https://firstpagesage.com/reports/average-cost-per-lead-by-industry/"
+      },
+      {
+        "claim": "Meta/Facebook delivers far cheaper leads than Google for lead gen: average Meta CPL of $27.66 versus Google's $70.11, with Meta CPC of $0.70–$1.92 versus Google Search CPC of $5.26.",
+        "vote": "1-2",
+        "source": "https://www.flyweel.co/blog/lead-gen-cpl-cac-benchmark-index-2025"
+      },
+      {
+        "claim": "Customer acquisition cost for SMB targets (1–50 employees) ranges $200–$600, and a healthy LTV:CAC ratio is 3:1 or higher.",
+        "vote": "0-3",
+        "source": "https://www.flyweel.co/blog/lead-gen-cpl-cac-benchmark-index-2025"
+      },
+      {
+        "claim": "Healthcare is among the lowest-CPL verticals, with an average cost per lead of $85-$145, driven by local SEO and patient reviews — favorable acquisition economics for a healthcare-adjacent AI assistant (e.g., dental/med spa/vet clinics).",
+        "vote": "0-3",
+        "source": "https://axzlead.com/blog/average-cost-per-lead-by-industry"
+      },
+      {
+        "claim": "Legal Services have the highest-intent but very expensive leads at $650-$800 average CPL and are highly localized, implying a high CAC for an agency selling to legal SMBs via paid ads.",
+        "vote": "1-2",
+        "source": "https://axzlead.com/blog/average-cost-per-lead-by-industry"
+      },
+      {
+        "claim": "For an SEO/digital marketing agency, the average customer lifespan is 41 months (about 3.4 years), implying low monthly churn for retained recurring-service clients.",
+        "vote": "0-3",
+        "source": "https://firstpagesage.com/reports/average-customer-lifetime-value-ltv-clv-for-a-services-company-fc/"
+      },
+      {
+        "claim": "Marketing agencies on a retainer model have 1.6% monthly churn (18% annual) and an average client lifespan of 56 months, versus project-based agencies at 4.2% monthly (42% annual) and 24 months lifespan.",
+        "vote": "0-3",
+        "source": "https://focus-digital.co/average-marketing-agency-churn/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.vendasta.com/blog/best-niches-marketing-agencies/",
+        "quality": "blog",
+        "angle": "broad/primary — best local-service niches for agencies",
+        "claimCount": 4
+      },
+      {
+        "url": "https://ippei.com/type-digital-marketing-most-profitable/",
+        "quality": "blog",
+        "angle": "broad/primary — best local-service niches for agencies",
+        "claimCount": 4
+      },
+      {
+        "url": "https://ippei.com/find-lucrative-niches-local-lead-generation/",
+        "quality": "blog",
+        "angle": "broad/primary — best local-service niches for agencies",
+        "claimCount": 4
+      },
+      {
+        "url": "https://ippei.com/profitable-niches-digital-marketing-agency/",
+        "quality": "blog",
+        "angle": "broad/primary — best local-service niches for agencies",
+        "claimCount": 5
+      },
+      {
+        "url": "https://theblueprint.training/niches-for-your-agency/",
+        "quality": "blog",
+        "angle": "broad/primary — best local-service niches for agencies",
+        "claimCount": 5
+      },
+      {
+        "url": "https://smbcrm.com/blog/100-niche-ideas-for-a-marketing-company-to-target/",
+        "quality": "blog",
+        "angle": "broad/primary — best local-service niches for agencies",
+        "claimCount": 3
+      },
+      {
+        "url": "https://www.wordstream.com/blog/2025-google-ads-benchmarks",
+        "quality": "primary",
+        "angle": "CAC / CPC by vertical (acquisition cost)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.adamigo.ai/blog/meta-ads-cost-per-lead-benchmarks-industry-2026",
+        "quality": "secondary",
+        "angle": "CAC / CPC by vertical (acquisition cost)",
+        "claimCount": 4
+      },
+      {
+        "url": "https://localiq.com/blog/search-advertising-benchmarks/",
+        "quality": "primary",
+        "angle": "CAC / CPC by vertical (acquisition cost)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://firstpagesage.com/reports/average-cost-per-lead-by-industry/",
+        "quality": "secondary",
+        "angle": "CAC / CPC by vertical (acquisition cost)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.flyweel.co/blog/lead-gen-cpl-cac-benchmark-index-2025",
+        "quality": "secondary",
+        "angle": "CAC / CPC by vertical (acquisition cost)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://axzlead.com/blog/average-cost-per-lead-by-industry",
+        "quality": "secondary",
+        "angle": "CAC / CPC by vertical (acquisition cost)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://firstpagesage.com/reports/average-customer-lifetime-value-ltv-clv-for-a-services-company-fc/",
+        "quality": "secondary",
+        "angle": "LTV / churn of recurring clients (retained value)",
+        "claimCount": 4
+      },
+      {
+        "url": "https://focus-digital.co/average-marketing-agency-churn/",
+        "quality": "secondary",
+        "angle": "LTV / churn of recurring clients (retained value)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.vendasta.com/blog/vendasta-client-churn-study/",
+        "quality": "primary",
+        "angle": "LTV / churn of recurring clients (retained value)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://contractorincharge.com/blog/missed-call-statistics-for-home-service-companies",
+        "quality": "blog",
+        "angle": "product fit + conversion + sales cycle",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.callbirdai.com/blog-contractors-lose-money-missed-calls",
+        "quality": "blog",
+        "angle": "product fit + conversion + sales cycle",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.pennock.co/blog/medspa-and-aesthetics-paid-media-benchmarks-google-vs-meta",
+        "quality": "secondary",
+        "angle": "product fit + conversion + sales cycle",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.medialogic.com/blog/healthcare-marketing/meta-healthcare-ad-changes-what-to-know/",
+        "quality": "secondary",
+        "angle": "saturation + compliance (contrarian/practitioner)",
+        "claimCount": 4
+      },
+      {
+        "url": "https://penrod.co/meta-ads-and-hipaa-compliance/",
+        "quality": "blog",
+        "angle": "saturation + compliance (contrarian/practitioner)",
+        "claimCount": 4
+      },
+      {
+        "url": "https://www.aifire.co/p/6-ai-automation-agency-niches-for-recurring-revenue-2025",
+        "quality": "blog",
+        "angle": "saturation + compliance (contrarian/practitioner)",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.ibisworld.com/united-states/number-of-businesses/dentists/1557/",
+        "quality": "primary",
+        "angle": "market size / business density (reachable TAM)",
+        "claimCount": 2
+      },
+      {
+        "url": "https://www.ibisworld.com/united-states/number-of-businesses/hair-salons/4410/",
+        "quality": "primary",
+        "angle": "market size / business density (reachable TAM)",
+        "claimCount": 2
+      },
+      {
+        "url": "https://www.grandviewresearch.com/horizon/outlook/medical-spa-market/united-states",
+        "quality": "unreliable",
+        "angle": "market size / business density (reachable TAM)",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.statista.com/statistics/436416/number-of-auto-repair-and-maintenance-shops-in-us/",
+        "quality": "unreliable",
+        "angle": "market size / business density (reachable TAM)",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.ibisworld.com/united-states/number-of-businesses/gym-health-fitness-clubs/1655/",
+        "quality": "primary",
+        "angle": "market size / business density (reachable TAM)",
+        "claimCount": 3
+      }
+    ],
+    "stats": {
+      "angles": 6,
+      "sourcesFetched": 26,
+      "claimsExtracted": 103,
+      "claimsVerified": 25,
+      "confirmed": 11,
+      "killed": 14,
+      "afterSynthesis": 10,
+      "urlDupes": 1,
+      "budgetDropped": 9,
+      "agentCalls": 109
+    }
+  }
+}

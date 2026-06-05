@@ -36,4 +36,4 @@
 ## Fundadores / lentes regionales
 - [Lentes regionales](30_Founders/lentes-regionales.md) — ×8/×6/×3, roles, regla de discrepancia (escala, no promedia)
 - [Preguntas de entrevista](30_Founders/preguntas-entrevista.md) — 23 huecos de criterio que la mente NO rellena
-- [Nichos US candidatos](30_Founders/nichos-us-candidatos.md) — 10 nichos investigados con datos (dental/medspa/vet ya servidos + HVAC/legal/real estate/...); CANDIDATOS, decisión humana
+- [Nichos US candidatos](30_Founders/nichos-us-candidatos.md) — **deep research verificado** (26 fuentes, 11 confirmadas/14 refutadas): ranking por CAC; Tier A = dental/medspa/vet (proven) + auto-repair/HVAC; EVITAR legal/real-estate; ⚠️ LTV/churn todo refutado (solo lado CAC). Crudo: research/nichos-us-deep-research.json. Decisión humana pendiente

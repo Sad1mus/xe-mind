@@ -1,27 +1,47 @@
-# 10 nichos US — CANDIDATOS (investigación con datos, NO decididos)
+# Nichos US — ranking por unidad económica de ADQUISICIÓN (deep research verificado)
 
-> ⚠️ **GUARDA-003:** estos son **candidatos investigados con datos**, NO la lista final. La mente NO decide los nichos — los propone con evidencia; **el humano elige**. Hueco #21.
-> Investigado 2026-06-04 vía web. Ranking por **fit con el stack actual** (asistente IA + booking + WhatsApp/voz + multicanal) × revenue-per-lead × demanda 24/7.
+> Reemplaza el pase ligero anterior. Fuente: deep research 2026-06-04 — 6 ángulos, 26 fuentes, 103 afirmaciones → 25 verificadas adversarialmente (11 confirmadas, 14 refutadas). Crudo con citas: `research/nichos-us-deep-research.json`. Sigue siendo **CANDIDATO**: la elección final de los 10 es VEREDICTO humano (GUARDA-003).
 
-| # | Nicho | Por qué (datos) | Fit stack hoy |
-|---|---|---|---|
-| 1 | **Dental** | Booking + HIPAA; alta LTV, recall; adopción alta de chatbots clínicos | ✅ ya es vertical (clinics) |
-| 2 | **Med spa / estética** | Alto ticket, citas; "med spas particularly benefit from automated booking" | ✅ ya es vertical (estetica) |
-| 3 | **Veterinaria** | Citas + urgencias 24/7; recordatorios | ✅ ya es vertical (vet) |
-| 4 | **Home services (HVAC/plomería/roofing)** | **Mayor revenue-per-call**: HVAC capturó $15k en llamadas de emergencia mes 1 con receptionist de $400; 76% de llamadas perdidas | ⚠️ nuevo (asistente + voz) |
-| 5 | **Legal (firmas solo/pequeñas)** | Intake: +35% captación; 3 casos extra/mes × $3-5k | ⚠️ nuevo |
-| 6 | **Real estate (agentes/brokers)** | Lead capture; 1 transacción extra/año justifica el costo (comisión $8k) | ⚠️ nuevo |
-| 7 | **Restaurantes / hospitality** | Reservas por WhatsApp/web; optimización de menú | ⚠️ nuevo |
-| 8 | **Ecommerce / retail** | Chatbot 24/7, FAQs, devoluciones; 69% de ecommerce con IA reporta mejora | ✅ capacidad existe (ecommerce-ciclismo, MedusaJS) |
-| 9 | **Servicios profesionales (contables/consultores/marketing)** | Doc analysis, transcripción; +20h/mes ahorradas | ⚠️ parcial |
-| 10 | **Auto services / dealerships** | Alto volumen de llamadas, booking | ⚠️ nuevo |
+## ⚠️ Caveat que cambia la lectura (no lo ignores)
+[Seguro] **TODAS las afirmaciones de LTV/churn por vertical fueron REFUTADAS** (datos de Vendasta y lifespan de agencias, votos 0-3). → Este ranking se apoya **solo en el lado del CAC/adquisición, NO en CAC:LTV completo.** La mitad "valor retenido" de la pregunta quedó sin evidencia.
+[Seguro] **CPL ≠ CAC.** Los benchmarks dan costo por *lead* (a nivel clic), no por *cliente cerrado*. El CAC real depende también de la tasa de cierre lead→cliente (no benchmarkeada por nicho) y del ciclo de venta. Tratar como "barato de generar leads", no "rentable confirmado".
 
-## Lectura para decisión
-- [Seguro] **3 de 10 (dental, med spa, vet) la agencia YA los sirve** → ruta más rápida de expansión a EE.UU. (re-tunear de LATAM a US, no construir de cero).
-- [Probable] Los de mayor ROI/ticket que NO tienes: **HVAC/home services y legal** — revenue-per-lead altísimo, break-even <60 días.
-- Mercado: receptionist virtual = $6.26B; 68% de PYMES US ya usan IA (QuickBooks).
-- **Margen típico del modelo:** 60-80% bruto ($2k-10k/mes retainer, $200-1k costo) — coherente con DEC-002/DEC-006.
+## Ranking por costo de adquisición (datos verificados)
 
-**Fuentes:** [OutlierKit nichos AAA 2026](https://outlierkit.com/resources/ai-automation-agency-niches/) · [Latenode agencias+pricing 2025](https://latenode.com/blog/industry-use-cases-solutions/enterprise-automation/17-top-ai-automation-agencies-in-2025-complete-service-comparison-pricing-guide) · [NextPhone AI receptionist por industria](https://www.getnextphone.com/blog/ai-receptionist) · [VoiceFleet servicios profesionales](https://voicefleet.ai/us/blog/ai-receptionist-professional-services-united-states-consultation-pricing-leads-2026-05-31) · [Talkdesk PYME US AI survey](https://www.talkdesk.com/news-and-press/press-releases/small-business-ai-survey/)
+### 🟢 TIER A — mejor CAC + fit probado (atacar primero)
+| Nicho | CPC | Conversión | CPL | Nota |
+|---|---|---|---|---|
+| **Dental** | ~$8.00 | 9-10.7% | **~$73-84** | TAM ~179,584 (3-0); **extensión directa LATAM**; HIPAA aplica |
+| **Med spa / estética / clínicas** | medio | medio-alto | medio | **extensión directa LATAM**; healthcare-adjacent; HIPAA |
+| **Veterinaria / pets** | bajo | **~13%** | **~$32** | alta conversión + CPL bajo; **vertical #1 probado de la agencia** |
+| **Auto repair** | ~$2.5 | **14.67%** (la +alta) | **~$28.50** (el +bajo) | mejor perfil puro de adquisición; vertical nuevo |
+| **HVAC / plomería** | ~$7.85 | — | ~$92-115 *(medium, 2-1)* | CPL bajo entre servicios locales; urgencia 24/7 (llamadas perdidas = $); vertical nuevo |
 
-**Decisión humana pendiente:** ¿cuáles 10 fija la agencia? ¿priorizar los 3 ya-servidos + 2 de alto ROI (HVAC, legal) para el primer empuje US?
+### 🟡 TIER B — viable, segunda ola
+- **Physicians / healthcare local** — CVR 11.62%, CPL ~$57. Fuerte, pero HIPAA + ciclo clínico.
+- **Fitness / gyms** — TAM ~107,751 (2-1); fit con booking; CAC no verificado a fondo.
+- **Restaurantes** — CPC más barato ($2.05) pero menor recurrencia/fit con el producto.
+- **Salones / hair** — TAM existe (IBISWorld); fit booking; CAC sin verificar.
+
+### 🔴 TIER C — EVITAR como adquisición primaria
+- **Legal** — doble castigo: CPC $8.58-9.87 + CPL **$131-784** + CVR baja **5.09%** (3-0). El CAC estructuralmente más alto.
+- **Real estate** — CPL $100.48 + CVR **3.28%** (la peor) (3-0).
+
+## Canal: Meta vs Google
+[Medium, 2-1] **Meta ~1/3 del CPL de Google Search** (~$22-28 vs ~$67-70 cross-industry) → mejor para volumen. PERO leads de **menor intención**; menor CPL ≠ menor costo-por-cliente-cerrado. Google Search = mayor intención, más caro. *(la brecha se estrecha ~21% año-a-año)*.
+
+## 💡 Recomendación (atacar primero)
+[Probable] El movimiento de menor riesgo y mejor CAC = la **intersección de [verticales ya probados en LATAM] ∩ [buen CAC US]**:
+1. **Dental · Med-spa/estética · Veterinaria** → ya los entregas; solo portar a US + correr ads. **Riesgo de ejecución mínimo.**
+2. Sumar **Auto repair** y **HVAC/plomería** → mejor CAC puro, pero **verticales nuevos** (requieren plantilla de entrega nueva).
+3. **NO** empezar por legal/real estate (CAC los hunde).
+
+## Preguntas abiertas (lo que el research NO pudo confirmar — validar con datos propios)
+- **LTV y churn real por vertical** (ningún claim sobrevivió) → medirlo con tus primeros clientes.
+- **Tasa de cierre lead→cliente** por nicho para esta oferta ($1,749/mo + $3,500) → el dato que vuelve el CPL en CAC.
+- **Saturación competitiva** (cuántas agencias de IA ya atacan cada nicho) → sin verificar.
+- **CPL de Meta por vertical** (no solo el promedio) → incierto.
+
+**Fuentes primarias:** WordStream 2025, LocaliQ 2026, First Page Sage, IBISWorld (dental/fitness/salons), Vendasta. Ver `research/nichos-us-deep-research.json`.
+
+**Relaciones:** alimenta [[DEC-011]] (canal de adquisición) · la elección de los 10 = futura DEC (VEREDICTO humano, hueco #21).
