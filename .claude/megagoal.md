@@ -66,7 +66,7 @@ La capa "verdad exacta" (CLAUDE.md §3.1) con la que Xe **administra** cada clie
 
 ## ⏸ EN COLA (no empezar sin cerrar la anterior)
 
-- **Fase 5 — Componer y vender Gold.** Bundle Gold completo (M1–M7) + **un onboarding Gold real** con OK humano. **Depende del backbone `registro`** (alta de cliente/proyecto, residencia).
+- **Fase 5 — Componer y vender Gold.** Bundle Gold completo (M1–M7) + **un onboarding Gold real** con OK humano. **Depende del backbone `registro`** (alta de cliente/proyecto, residencia). El flujo de captación ya existe: `packages/onboarding/` realiza el norte v1 (discovery→cotización→alta→entrega), oracle PASA + e2e local ([[VEREDICTO-005]]); ⏳ pendiente ratificación + cerrar entrega Gold (hueco #17).
   - **Condición de cierre (falsable):** la mente onboardea 1 cliente Gold real (discovery→cotización Gold→entrega multi-módulo), un humano aprueba el cobro sin corregir el número, replicable en las 3 lentes.
   - **🚧 Bloqueo:** extender el mapeo tier→plan a **Gold** (hoy [[DEC-009]] solo cubre Starter→basic; hueco #17 parcial); inventario oficial de "optimización continua" (hueco #23).
 

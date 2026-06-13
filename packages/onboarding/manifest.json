@@ -1,0 +1,25 @@
+{
+  "id": "onboarding",
+  "nombre": "Orquestador de onboarding (discovery → cotización → alta → entrega)",
+  "rol": "realiza el NORTE v1 (CLAUDE.md §9.2): el flujo de punta a punta con que Xe capta y da de alta un cliente",
+  "que_hace": "Toma un prospecto (discovery DEC-004), lo cotiza (DEC-006), lo da de alta en el registro (cliente+proyecto) y compone el payload de entrega — todo autónomo salvo cobrar/firmar/enviar (GUARDA-001).",
+  "tier": "transversal (operación comercial; base de Fase 5)",
+  "compone": ["packages/registro", "integrations/clinics"],
+  "no_reimplementa": "registro ni clinics (importa su verdad; no la copia)",
+  "config_env": {
+    "REGISTRO_DB": "ruta a la DB del registro (NO hardcodear, GUARDA-005); usada por packages/registro en execute."
+  },
+  "contrato": ["manifest", "inputs", "dry_run", "execute", "oracle"],
+  "guardas": [
+    "GUARDA-001 (alta tras --confirm; NUNCA cobrar/firmar/enviar)",
+    "GUARDA-003 (discovery/lente/tier inválidos -> BLOQUEO)",
+    "GUARDA-005 (DB por env)"
+  ],
+  "decisiones": ["DEC-004 discovery", "DEC-006 pricing", "DEC-009 tier->plan"],
+  "bloqueos": [
+    "🚧 hueco #14: precios locales no publicados (todo lo que no sea Gold US/EU) -> 'CONFIRMAR', no se inventa",
+    "🚧 hueco #17: entrega solo para Starter->basic; otros tiers -> 'PENDIENTE-#17'",
+    "🚧 hueco #26: lente APAC sin marca firmada (DEC-007 no la cubre)",
+    "⚠️ discovery hoy limitado a verticales de clinics (veterinaria/dental/estetica) por reuso de su validación"
+  ]
+}
