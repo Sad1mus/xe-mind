@@ -60,9 +60,13 @@ Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · r
 
 ---
 
+## 🧱 BACKBONE — registro de clientes y proyectos (transversal)
+
+La capa "verdad exacta" (CLAUDE.md §3.1) con la que Xe **administra** cada cliente/proyecto en las 3 lentes, con residencia (GUARDA-002). **Construida 2026-06-13** ([[VEREDICTO-004]], `packages/registro/`): oracle PASA + e2e local (cliente+proyecto creados, verificado por SELECT). ⏳ pendiente VEREDICTO humano + ratificar esquema ([[DEC-013]], propuesta). **Es precondición de Fase 5 y Fase 6** — no se gestiona Gold en 3 continentes sin esto.
+
 ## ⏸ EN COLA (no empezar sin cerrar la anterior)
 
-- **Fase 5 — Componer y vender Gold.** Bundle Gold completo (M1–M7) + **un onboarding Gold real** con OK humano.
+- **Fase 5 — Componer y vender Gold.** Bundle Gold completo (M1–M7) + **un onboarding Gold real** con OK humano. **Depende del backbone `registro`** (alta de cliente/proyecto, residencia).
   - **Condición de cierre (falsable):** la mente onboardea 1 cliente Gold real (discovery→cotización Gold→entrega multi-módulo), un humano aprueba el cobro sin corregir el número, replicable en las 3 lentes.
   - **🚧 Bloqueo:** extender el mapeo tier→plan a **Gold** (hoy [[DEC-009]] solo cubre Starter→basic; hueco #17 parcial); inventario oficial de "optimización continua" (hueco #23).
 
