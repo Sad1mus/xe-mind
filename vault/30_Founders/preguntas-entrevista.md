@@ -27,7 +27,7 @@
 14. **Precios locales de los tiers no-Gold:** el doc autoritativo solo publica el precio regional de **Gold** (USA $1,749 · EU €1,149 · LATAM ≈2,360,000 COP). ¿Cuáles son los de Starter/Silver/Enterprise/Partner por región? (la mente NO los inventa; hoy "se confirman por FX en la propuesta").
 15. **¿Sigue vigente el lanzamiento "1000 fundadores"** (ZENKAI) bajo EtherLabX, o se retira? El doc de EtherLabX no lo menciona (DEC-003 quedó en revisión).
 16. ~~Marca: ZENKAI vs EtherLabX~~ → **RESUELTO (DEC-007):** Xe = paraguas/mente (provisional); ZENKAI = Europa; EtherLabX = LATAM; Américas = por definir.
-17. **Mapeo onboarding-de-entrega:** `Starter→basic` ✅ **RESUELTO ([[DEC-009]], 2026-06-04)**. Falta mapear Silver/Gold/Enterprise/Partner → (`growth`/`scale`/?) — los planes de entrega son 3 y los tiers 5, no es 1:1.
+17. **Mapeo onboarding-de-entrega:** `Starter→basic` ✅ **RESUELTO ([[DEC-009]])**. El resto → **PROPUESTA en [[DEC-014]] (2026-06-13), pendiente VEREDICTO**: Silver→`basic`×3 (M3); Gold/Enterprise/Partner → 🚧 BLOQUEO (Gold necesita M4 multicanal + M5 video que aún no existen; Enterprise hereda esos gaps + ops humano; Partner = white-label no construido). Falta que el humano ratifique Silver y confirme que Gold+ se entrega componiendo módulos, no con un plan suelto.
 
 ## Arquitectura de marca (tras DEC-007)
 18. **¿El pricing de DEC-006 es compartido por las 3 marcas** (Xe/ZENKAI/EtherLabX) o cada marca regional tiene el suyo? El doc está en etherlabx.com (ahora = LATAM) pero lista 3 continentes — ambiguo.
