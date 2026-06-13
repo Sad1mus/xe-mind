@@ -3,6 +3,7 @@
 Índice del vault. Una línea por nota. El detalle vive en cada archivo, no aquí.
 
 ## Sistema
+- [Handoff de franja](00_System/handoff.md) — **estado vivo (2026-06-13):** hecho/espera-humano/bloqueado/próximo paso. Leer al despertar (§7)
 - [Convenciones del vault](00_System/conventions.md) — formato de DEC/GUARDA/VEREDICTO; reglas duras (falsabilidad, citar fuente, hueco≠invento)
 - [Inventario del portafolio](00_System/inventario-portafolio.md) — capacidad×repo: qué existe vs gaps; Starter/Silver ~90% existe, Gold+ con gaps (video, multicanal, white-label)
 - [Contrato de capacidades](00_System/contrato-capacidades.md) — interfaz manifest/inputs/dry_run/execute/oracle; habilita construcción paralela; lazo probado
@@ -16,6 +17,9 @@
 - [DEC-007 Arquitectura de marca — Xe](10_Decisions/DEC-007_Arquitectura-de-marca-Xe.md) — **aceptada (provisional):** Xe = mente paraguas (Jordy/Sad1mus + socio/HaxelGG); ZENKAI=Europa · EtherLabX=LATAM · Américas=por definir
 - [DEC-010 Xe = orquestador que integra](10_Decisions/DEC-010_Arquitectura-monorepo-Xe.md) — **aceptada:** empresa compartida; Xe **integra los productos donde viven, NO los mueve**; monorepo (mind/packages/integrations/infra), local-first; migración al Team/Org trivial si no se hardcodea
 - [DEC-009 Mapeo tier→plan](10_Decisions/DEC-009_Mapeo-tier-plan-entrega.md) — **aceptada (parcial):** Starter→`basic`; resto del mapeo pendiente
+- [DEC-013 Esquema del registro](10_Decisions/DEC-013_Esquema-registro-clientes-proyectos.md) — **propuesta (pendiente VEREDICTO):** esquema cliente/proyecto (lente, marca, tier, region_datos, estado) de `packages/registro/`; campos contrato/precio/ROI sin fijar; probada por [[VEREDICTO-004]]
+- [DEC-014 Mapeo tier→plan completo](10_Decisions/DEC-014_Mapeo-tier-plan-completo.md) — **propuesta (pendiente VEREDICTO):** completa #17 con planes reales del producto (basic⊂growth⊂scale); Silver→basic×3 (M3); Gold/Enterprise/Partner 🚧 BLOQUEO (faltan M4/M5/white-label); extiende [[DEC-009]]
+- [DEC-012 Canal de mando de Xe](10_Decisions/DEC-012_Canal-de-mando-Xe.md) — **propuesta (pendiente VEREDICTO):** operar Xe por Telegram (chat_id allowlist) → Claude Code headless en infra propia; dinero con DOBLE GATE; gate en código; rollout por fases. Ref: `infra/canal-mando/`
 - [DEC-006 Pricing oficial EtherLabX](10_Decisions/DEC-006_Pricing-oficial-EtherLabX.md) — **AUTORITATIVA (aceptada)**: 5 planes (Starter $399/Silver $699/Gold $1,749/Enterprise $2,999/Partner desde $5,000) + onboarding por hitos + add-ons + Gold por región
 - [DEC-001 Modelo de pricing](10_Decisions/DEC-001_Modelo-de-pricing.md) — ⚠️ SUPERADA por DEC-006 (modelo ZENKAI ×8/×6/×3, histórico)
 - [DEC-002 Filosofía de cobro](10_Decisions/DEC-002_Filosofia-de-cobro.md) — ✅ aceptada (corroborada por DEC-006): suelo, por valor/ROI, MRR/LTV
@@ -29,9 +33,14 @@
 - [GUARDA-003 No inventar](20_Guardas/GUARDA-003_No-inventar.md) — hueco → bloqueo + preguntas-entrevista
 - [GUARDA-004 Suelo de costo](20_Guardas/GUARDA-004_Suelo-de-costo.md) — nunca cotizar bajo el costo base
 - [GUARDA-005 Sin hardcodeo de cuentas](20_Guardas/GUARDA-005_Sin-hardcodeo-de-cuentas.md) — IDs/refs/keys solo en env/config → Xe portable, migración trivial
+- [GUARDA-006 Topes y kill switch del canal de mando](20_Guardas/GUARDA-006_Topes-y-kill-switch-canal-mando.md) — **propuesta:** topes duros ($/tokens/acciones), confirm-en-código, kill switch, log append-only; endurece GUARDA-001 para el canal automatizado
 
 ## Veredictos
 - [VEREDICTO-001 Lazo Starter](40_Postmortems/VEREDICTO-001_lazo-starter.md) — **PASA:** Xe orquestó agente-clinicas y creó una clínica real en DB local de prueba (verificado REST+psql); cierra Fase 2→3; contrato validado
+- [VEREDICTO-002 Multi-agente (M3)](40_Postmortems/VEREDICTO-002_multi-agente.md) — **ORACLE PASA** (pendiente ratificación humana): submódulo 4c de Fase 4; `packages/multi-agente/` compone clinics para N agentes/cliente (lote atómico + sesión única); producto intacto; falta ejecución real end-to-end
+- [VEREDICTO-004 Registro](40_Postmortems/VEREDICTO-004_registro.md) — **PASA (oracle + e2e local)** pendiente ratificación: `packages/registro/` = verdad exacta §3.1 de clientes/proyectos en 3 lentes con residencia (GUARDA-002); cliente+proyecto creados en sqlite local verificados por SELECT; backbone de Fase 5/6; propone [[DEC-013]]
+- [VEREDICTO-005 Onboarding](40_Postmortems/VEREDICTO-005_onboarding.md) — **PASA (oracle + e2e local)** pendiente ratificación: `packages/onboarding/` realiza el norte v1 (§9.2) discovery→cotización→alta→entrega componiendo registro+clinics; no cobra/firma/envía (GUARDA-001); cotización no inventa (huecos #14/#17); base de Fase 5
+- [VEREDICTO-006 Reporte (M6)](40_Postmortems/VEREDICTO-006_reporte.md) — **PASA (oracle + e2e local)** pendiente ratificación: `packages/reporte/` = cockpit de cartera; agrega clientes/proyectos por lente/tier/estado leyendo el registro; snapshot persistido no enviado (GUARDA-001); ROI=PENDIENTE-#23 (no inventa); cierra lado cartera de M6
 
 ## Fundadores / lentes regionales
 - [Lentes regionales](30_Founders/lentes-regionales.md) — ×8/×6/×3, roles, regla de discrepancia (escala, no promedia)
