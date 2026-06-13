@@ -18,7 +18,7 @@ Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · r
 | M3 Multi-agente / ilimitado por cliente | ✅ **construido, oracle PASA** ([[VEREDICTO-002]], `packages/multi-agente/`) · ⏳ pendiente ratificación + e2e | era gap → 4c |
 | M4 Multicanal unificado (web+social, un cerebro) | ❌ gap | **gap** → 4b |
 | M5 Video IA (HeyGen/Higgsfield) | ❌ gap · 🚧 bloqueado (proveedor+costo) | **gap** → 4a |
-| M6 Reporte semanal / analytics ROI | ⚠️ parcial (clinics) | **gap** → 4d |
+| M6 Reporte semanal / analytics ROI | ✅ **cartera construida, oracle PASA** ([[VEREDICTO-006]], `packages/reporte/`) · 🚧 ROI pendiente (#23) | gap → 4d (lado cartera cerrado) |
 | M7 Optimización continua (priority) | ⚠️ ops + criterio sin definir (hueco #23) | **gap** |
 
 ---
@@ -41,7 +41,7 @@ Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · r
 | **4a · Video IA** | M5 | 🚧 **BLOQUEADO** — proveedor + costo es decisión humana (afecta [[GUARDA-004]] suelo de costo). No se arranca hasta firmar la DEC. |
 | **4b · Multicanal unificado** | M4 | ⬜ **pendiente** — web + social sobre el mismo cerebro. Depende de qué canales sociales (Meta/n8n son "aspiracionales" CLAUDE.md §9.4: validar antes de cablear). |
 | **4c · Multi-agente / ilimitado** | M3 | ✅ **construido, ORACLE PASA** ([[VEREDICTO-002]], `packages/multi-agente/`, compone `integrations/clinics`) · ⏳ **pendiente ratificación humana + ejecución real e2e** (N agentes contra DB de prueba, al rigor de [[VEREDICTO-001]]). |
-| **4d · Reporte + analytics ROI** | M6 | ⬜ **pendiente** — clinics tiene reporte básico; "optimización continua" sin definir (hueco #23). |
+| **4d · Reporte + analytics ROI** | M6 | ✅ **cartera construida, ORACLE PASA** ([[VEREDICTO-006]], `packages/reporte/`, lee el registro) · 🚧 ROI pendiente: datos de producto + KPIs (#23). |
 
 **Condición de cierre de CADA submódulo (falsable):**
 1. Existe `packages/<modulo>/` con `manifest` + `inputs` validados.

@@ -1,0 +1,26 @@
+{
+  "id": "reporte",
+  "nombre": "Reporte semanal + analytics de cartera (M6)",
+  "modulo_gold": "M6",
+  "rol": "cockpit de administración — Xe ve el estado de la agencia leyendo la verdad exacta del registro (§3.1)",
+  "que_hace": "Agrega clientes y proyectos por lente/tier/estado y por plan_entrega; produce el reporte semanal de cartera. Las métricas de ROI quedan PENDIENTE-#23 hasta tener datos de producto + KPIs firmados.",
+  "tier": "Gold (parcial: cartera ✅; ROI pendiente)",
+  "compone": ["packages/registro"],
+  "no_reimplementa": "registro (lee su schema y su DB; no la copia)",
+  "config_env": {
+    "REGISTRO_DB": "ruta a la DB del registro (lectura). NO hardcodear (GUARDA-005).",
+    "REPORTE_OUT": "ruta del snapshot persistido por execute. NO hardcodear."
+  },
+  "contrato": ["manifest", "inputs", "dry_run", "execute", "oracle"],
+  "guardas": [
+    "GUARDA-001 (persiste snapshot tras --confirm; NUNCA envía al cliente)",
+    "GUARDA-002 (agrega por region; no extrae el dato regulado)",
+    "GUARDA-003 (ROI sin datos/KPIs -> PENDIENTE-#23, no se inventa)",
+    "GUARDA-005 (DB y salida por env)"
+  ],
+  "decisiones": ["DEC-006 tiers"],
+  "bloqueos": [
+    "🚧 hueco #23: métricas de ROI (ingresos/citas/conversión) requieren datos de producto + definición de KPIs",
+    "🚧 conexión a datos de producto (Supabase de clinics, etc.) — hoy solo lee la verdad de cartera del registro"
+  ]
+}
