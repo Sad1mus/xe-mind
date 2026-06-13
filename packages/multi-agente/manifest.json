@@ -1,0 +1,23 @@
+{
+  "id": "multi-agente",
+  "nombre": "Multi-agente ilimitado por cliente",
+  "modulo_gold": "M3",
+  "que_hace": "Compone N agentes bajo un mismo cliente sobre el conector clinics: valida el lote, garantiza sesiones unicas y orquesta la creacion atomica. Lleva de 1 agente/cliente a N (gap de Gold).",
+  "tier": "Gold",
+  "compone": ["integrations/clinics"],
+  "no_reimplementa": "agente-clinicas (importa la verdad de clinics; no la copia)",
+  "verticales": ["veterinaria", "dental", "estetica"],
+  "region_default": "LATAM",
+  "config_env": {
+    "CLINICS_REPO": "ruta al repo agente-clinicas (NO hardcodear). Reusa el execute del conector clinics.",
+    "comentario": "credenciales/Supabase ref viven en el .env de agente-clinicas, nunca aqui (GUARDA-005)."
+  },
+  "contrato": ["manifest", "inputs", "dry_run", "execute", "oracle"],
+  "guardas": [
+    "GUARDA-001 (execute atomico tras OK humano)",
+    "GUARDA-003 (lote atomico, no invencion parcial)",
+    "GUARDA-005 (sin hardcodeo de cuentas)"
+  ],
+  "decisiones": ["DEC-006 pricing", "DEC-008 portafolio componible", "DEC-009 Starter->basic"],
+  "bloqueos": ["hueco #17: mapeo tier->plan para Gold (precio del bundle, no del agente suelto)"]
+}
