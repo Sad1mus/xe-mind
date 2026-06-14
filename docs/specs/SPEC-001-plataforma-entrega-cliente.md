@@ -40,6 +40,7 @@ Una **plantilla reusable** que permita: (a) que el ingeniero acceda por SSH a un
 - **G-4 · Hardening obligatorio** — firewall, SSH solo por clave, usuario no-root, fail2ban, antes de exponer cualquier app pública. Un agente con poder de shell en un host público es superficie de ataque.
 - **G-5 · Portabilidad** — stack estándar (Docker + repo en GitHub + backups propios). Debe poder levantarse en otro VPS/cloud **sin reescribir**. Mide el lock-in: cero dependencias propietarias de un solo proveedor.
 - **G-6 · SLA honesto** — el nivel de disponibilidad prometido al cliente debe estar respaldado por la infra elegida y declarado por contrato; nunca prometer uptime que no se controla.
+- **G-7 · Media gen vs. cerebro crítico** — un agregador de modelos (ej. kie.ai) se usa SOLO para generación de media de **contenido no sensible** (imagen/video/música de entregables). El **LLM crítico** (razonamiento, decisiones) va **directo a Anthropic**, no a través de un agregador (evita variantes cuantizadas sin aviso y mantiene control). Datos de cliente regulados **no pasan por el agregador** (refuerza G-1).
 
 ## 5 · Fuera de alcance (de esta spec)
 
@@ -55,8 +56,9 @@ Stack base candidato (NO implementar hasta aprobar `design` + `tasks`):
 2. **Coolify** sobre el VPS → app aislada por cliente, dominio + SSL automáticos.
 3. **Claude Code headless** en el VPS como "ingeniero IA" (acceso del ingeniero por SSH).
 4. **App del cliente** + **LibreChat** con **API keys de la agencia** (Anthropic/OpenAI).
+5. **Capa de generación de media** (imagen/video/música para entregables creativos de la agencia) — candidato **kie.ai** (agregador: Veo, Kling, Runway, Suno, una sola key, ~30–80% más barato que ir directo). Sujeto a **G-7**. *Trade-off a sopesar en `design`:* kie es más barato pero con latencia/fiabilidad variable (esperas de minutos, fallos intermitentes); alternativa premium si la latencia importa: Fal.ai.
 
-> El "cerebro" (modelo LLM) NO es open source: se paga por API. Open source es la **capa de agente/orquestación/hosting**, no el modelo.
+> El "cerebro" (modelo LLM) NO es open source: se paga por API, y el crítico va directo a Anthropic (G-7). Open source es la **capa de agente/orquestación/hosting**, no el modelo. El agregador (kie.ai) es solo para media gen no sensible.
 
 ## 7 · Riesgos
 
