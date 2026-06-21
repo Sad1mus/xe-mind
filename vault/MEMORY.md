@@ -8,6 +8,7 @@
 - [Inventario del portafolio](00_System/inventario-portafolio.md) — capacidad×repo: qué existe vs gaps; Starter/Silver ~90% existe, Gold+ con gaps (video, multicanal, white-label)
 - [Contrato de capacidades](00_System/contrato-capacidades.md) — interfaz manifest/inputs/dry_run/execute/oracle; habilita construcción paralela; lazo probado
 - [SMC — qué falta para entregar](00_System/SMC-entrega-pendientes.md) — **auditoría 2026-06-20:** NO está "próximo a entregar" (es demo técnica). Ingeniería sólida (RLS, webhooks firmados, CI/tests); bloqueantes: Stripe en TEST forzado (no factura live), sin páginas legales, sin panel admin, bug pago único duplica filas
+- [SMC — estructura en Linear](00_System/SMC-linear-estructura.md) — **2026-06-21:** volcado a Linear (team Zenkai, Project SMC) bajo DEC-015; 7 issues ZEN-5..11 (4 bloqueantes + 3 deseables). Linear = coordinación, no fuente de verdad
 - Lazo Starter (dry-run ejecutable): `loop/starter_loop_dryrun.py` — discovery→quote→payload→STOP en GUARDA-001
 
 ## Integraciones (conectores a productos externos)
