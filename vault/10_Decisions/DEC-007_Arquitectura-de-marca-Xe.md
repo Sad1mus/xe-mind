@@ -10,7 +10,7 @@ lente: global
 
 | Nivel | Nombre | Qué es |
 |---|---|---|
-| **Paraguas / la mente** | **Xe** *(provisional)* | La **fusión del socio (`HaxelGG`) y Jordy (`Sad1mus`)**. Es la mente misma (este repo, `xe.md`). Gobierna con criterio compartido. Ambos = colaboradores del repo, inyección de conocimiento à la MIDAS. |
+| **Paraguas / la mente** | **Xe** *(provisional)* | La **fusión del socio (`HaxelGG`) y Jordy (`Sad1mus`)**. Es la mente misma (este repo, `xe.md`). Gobierna con criterio compartido. Ambos = colaboradores del repo, inyección de conocimiento por el socio humano. |
 | Marca regional — Europa (EMEA) | **ZENKAI** | Camilo |
 | Marca regional — LATAM | **EtherLabX** | Etherlabs |
 | Marca regional — Américas (USA/Canadá) | *por definir* | Sebas, Jordy |

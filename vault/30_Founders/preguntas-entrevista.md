@@ -39,7 +39,7 @@
 22. **Socio `HaxelGG`:** ¿qué marca/región opera y cuál es su autoridad de decisión? (relacionado con #8, #19)
 23. **Inventario del portafolio:** ¿lista oficial de TODAS las capacidades del portafolio (las que componen Gold/Enterprise: video, multicanal web/social, integraciones, analytics, multi-agente…)? Para saber qué módulos faltan construir.
 24. **`zenkai-super-brain` (HaxelGG):** → **DIRECCIÓN DADA (Jordy, 2026-06-04): todo se funde en Xe** ("todo en xe", una sola mente). ⚠️ Pendiente que **HaxelGG lo confirme y migre** su trabajo a `xe-mind` — es su repo; la fusión requiere su alineación, no solo la directiva.
-25. **Plataformas cripto/fintech** (`smc`, `ZAT`, `midas`): ¿entran al portafolio de la agencia como un vertical (fintech) o se quedan en dominio MIDAS? Hoy las trato como MIDAS-adjacent, fuera del core agencia.
+25. **Plataformas cripto/fintech** (`smc`, `ZAT`, `midas`): ¿entran al portafolio de la agencia como un vertical (fintech) o se quedan fuera del core agencia (dominio trading/fintech)? Hoy las trato como adyacentes, fuera del core agencia.
 
 ## Administración / registro (tras VEREDICTO-004)
 26. **Reconciliación lente↔marca↔LATAM:** [[DEC-007]] nombra LATAM/EtherLabX, pero los teatros de CLAUDE.md §1 son Americas/EMEA/APAC. ¿LATAM es sub-lente de Americas, un cuarto teatro, o se mapea a APAC? El registro (`packages/registro/`) usa hoy el enum {Americas,EMEA,APAC}; la reconciliación es decisión humana.

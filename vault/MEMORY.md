@@ -1,4 +1,4 @@
-# Memoria — zenkai-mind (La Mente de la Agencia)
+# Memoria — Xe (La Mente de la Agencia)
 
 Índice del vault. Una línea por nota. El detalle vive en cada archivo, no aquí.
 

@@ -26,7 +26,7 @@
 | Capa inferencia barata (LiteLLM/Ollama "JARVIS") | ecommerce (diseñada, diferida) | ⚠️ diferida | infra/margen |
 | SLA / account manager / white-glove | — | ❌ ops humano | Enterprise |
 | White-label | — | ❌ **gap** | Partner |
-| Markets / TradingView viz | orvex/smc-platform | ✅ (nicho fintech, alineado a MIDAS) | — |
+| Markets / TradingView viz | orvex/smc-platform | ✅ (nicho fintech, fuera del core agencia) | — |
 
 ## Verticales que existen (todos tuneados a LATAM, no US)
 Veterinaria · Dental · Estética (clinics) · Ecommerce ciclismo (ecommerce-ciclismo).
@@ -35,7 +35,7 @@ Veterinaria · Dental · Estética (clinics) · Ecommerce ciclismo (ecommerce-ci
 - `GrupoJuanaSanchez` + `shopify-store-juana-sanchez` — cliente Shopify real → **capacidad Shopify** (alterna a MedusaJS). ✅
 - `Portafolio-Landing-Demos` — landings de demo → capacidad de **landing/marketing**.
 - `zenkai-super-brain` ("Super Brain made by Zenkai", HTML) — ⚠️ **el socio ya tiene un "cerebro" propio. Riesgo de divergencia con Xe** → reconciliar (hueco #24): ¿se funde en Xe o es separado?
-- **Fintech/cripto (MIDAS-adjacent, NO core agencia):** `smc-platform` (markets/TradingView), `ZAT` (fondo de inversión), `midas`/`midas-engine` (trading). Se anotan como adyacentes; **no entran al portafolio agencia sin criterio humano** — su hábitat es MIDAS.
+- **Fintech/cripto (fuera del core agencia):** `smc-platform` (markets/TradingView), `ZAT` (fondo de inversión), `midas`/`midas-engine` (trading). Se anotan como adyacentes; **no entran al portafolio agencia sin criterio humano** — su dominio es trading/fintech, no la agencia.
 
 ## Veredicto del inventario
 - **Starter / Silver: ~80-90% existe** (agente + canal + panel + booking + web + pagos + diseño). Falta orquestación por la mente + tunear a US.

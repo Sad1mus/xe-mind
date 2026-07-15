@@ -1,6 +1,6 @@
-# Convenciones del Vault — zenkai-mind
+# Convenciones del Vault — Xe
 
-Hereda el ADN epistémico de MIDAS. Un hecho, un dueño. Nada de criterio inventado.
+ADN epistémico propio de Xe. Un hecho, un dueño. Nada de criterio inventado.
 
 ## Tipos de nota
 
