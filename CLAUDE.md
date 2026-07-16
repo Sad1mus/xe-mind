@@ -197,6 +197,44 @@ Destino: la mente **absorbe y reescribe** bajo un estándar único (orvex: 18 sk
 ### 9.5 Método de construcción = blueprint 80/20 (en orden, no al revés)
 `Fundación (Memory + Planning + Context) → Hooks/Git (incl. GUARDA dinero/firma) → MCP (read-first: supabase/github/stripe) → Subagentes → Loop agéntico (el norte, al final)`. El plan de fases vive en `.claude/megagoal.md`. **La inyección de conocimiento** (cómo entran DEC/GUARDAS) la opera el socio humano; la mente solo destila y propone, nunca inventa el criterio.
 
+### 9.6 Orden de construcción del catálogo — decidido 2026-07-16 (Jordy)
+
+> Escrito para que un socio entienda **el porqué** sin preguntar. Decisiones humanas; lo marcado 🚧 sigue siendo hueco y **no se rellena** (GUARDA-003).
+
+**Decisión 1 — El catálogo NO se recorta. Se construyen los gaps.**
+Se evaluó recortar [[DEC-006]] a los tiers entregables (Starter/Silver) y se **descartó**. Gold/Enterprise/Partner se quedan en el catálogo y se construye lo que les falta. *Motivo:* el negocio se escala, no se encoge; y [[DEC-014]] ya dice que construir M4/M5 es exactamente lo que desbloquea Gold. *Contra asumido, con los ojos abiertos:* hoy Gold sigue publicado con ★ Recommended sin ser entregable — la ventana entre hoy y M4/M5 es deuda comercial conocida, no un descuido.
+
+**Decisión 2 — El orden es M4 primero. No M5, no white-label.**
+*Motivo (tres razones, en orden de peso):*
+1. **M4 es el único gap que también sirve a lo que YA factura.** Gold no tiene cliente esperando; los proyectos de canal (bots, agente de voz) sí. M4 es infraestructura de canal: construirlo entrega trabajo vendido *y* desbloquea Gold. M5 y white-label no entregan nada a nadie que espere hoy.
+2. **M4 jubila Baileys.** La pata WhatsApp del multicanal entra por **Cloud API oficial** (licencia en trámite en Meta), no por Baileys. Eso cierra de una vez el riesgo de ToS (baneo del número *del cliente*) y la **GPL-3.0 de `libsignal`**, que entra como dependencia transitiva de Baileys. Un módulo, tres frentes cerrados.
+3. No depende de proveedor externo por firmar, a diferencia de M5 (ver 4a, bloqueado por [[GUARDA-004]]).
+
+**Decisión 3 — Enterprise y Partner no se automatizan. Se contratan.**
+`SLA · account manager · white-glove · equipo dedicado` **no son software**: son personas. Ninguna automatización los entrega. Confirma lo que [[DEC-014]] ya dice (*"ops humano, no plan de software"*). *Consecuencia:* Enterprise ($2.999) y Partner ($5.000+) siguen 🚧 aunque M4/M5 se construyan. Automatizando se llega a **cumplir Gold entero**, no más arriba.
+
+**Decisión 4 — El disparador de pago dispara construcción, NUNCA entrega.**
+El visto humano va entre "el cliente pagó" y "el cliente recibe". *Motivo:* con entrega automática, un fallo del agente sale con nuestra marca y con el dinero ya cobrado. Refuerza [[GUARDA-001]] (dinero y firma).
+
+**Hallazgo que ordena el trabajo (verificado 2026-07-16):**
+- **M3 está construido con `ORACLE PASA` ([[VEREDICTO-002]]) y Silver = `basic`×3 vía M3 ([[DEC-014]]).** Silver ($699) está **a un VEREDICTO humano** de ser entregable, sin construir nada. Es la acción más barata disponible y no depende de M4.
+- **`agente-clinicas` es el motor de todo el catálogo** (`basic ⊂ growth ⊂ scale`) y **tiene 0 policies de RLS**: el aislamiento entre clínicas es solo de aplicación. Silver = 3 agentes × N clínicas es exactamente la carga que lo rompe, y son historiales de pacientes. **El patrón correcto ya está escrito en `nexus/db/init/00-init.sh`** (`NOSUPERUSER` + `FORCE ROW LEVEL SECURITY` + policy por `current_setting('app.tenant_id')`). Se copia, no se diseña. **Va antes de escalar Silver.**
+
+**Decisión 5 — Los canales de M4 son: `web · whatsapp[baileys|cloud_api] · instagram_dm · messenger`.**
+*Motivo:* Instagram DM y Messenger son **Meta Graph API**, la misma familia que WhatsApp Cloud API — **una sola aprobación de Meta cubre los tres canales**. Cierra el *"social"* que promete Gold con la mínima superficie nueva y sin trámites adicionales. TikTok queda **fuera**: es otra API, otra aprobación y otro mantenimiento (reevaluable si un cliente lo pide y paga).
+
+**Decisión 6 — WhatsApp en convivencia, no swap de golpe.**
+Clientes **actuales → Baileys**; clientes **nuevos → Cloud API**. *Motivo:* M4 sale ya y no queda rehén de que Meta apruebe; los clientes nuevos entran por la vía oficial desde el día uno. *Contra asumido:* se mantienen dos transportes, y la **GPL-3.0 de `libsignal` sigue en el árbol mientras quede un cliente en Baileys** — la deuda se cierra migrando al último cliente, y esa migración hay que agendarla, no olvidarla.
+
+**🚧 Huecos abiertos de esta sección (no inventar):**
+- **PENDIENTE-M4-wiring:** el atado real por canal (llamada al API de cada uno) se cablea **cuando exista su credencial**. `M4` valida, compone y bloquea; no simula un API que no se ha probado (GUARDA-003).
+- **PENDIENTE-M4-meta:** `cloud_api`, `instagram_dm` y `messenger` **no pueden ejecutar hasta que Meta apruebe la licencia**. Verificado en `dry-run`: hoy 1/4 canales listos (solo `web`) en un juego Gold; 2/2 en un juego de convivencia (`web` + `whatsapp/baileys`). **Gold no se puede entregar aunque M4 esté construido** — depende de Meta, no de nosotros.
+- **PENDIENTE-M4-migracion:** fecha para migrar el último cliente de Baileys → Cloud API (cierra la GPL-3.0 y el riesgo de baneo). Sin fecha, la convivencia es permanente por omisión.
+
+**Qué invalidaría esta sección:** que [[DEC-006]] cambie lo que promete un tier; que aparezca un cliente pagando Gold (cambiaría la prioridad de M4 vs M5); o que Meta rechace la licencia (obligaría a replantear la pata WhatsApp entera).
+
+**Relaciones:** consume [[DEC-006]] · ejecuta la vía de desbloqueo de [[DEC-014]] · restringida_por [[GUARDA-001]], [[GUARDA-003]], [[GUARDA-004]] · plan por fases en `.claude/megagoal.md` (Fase 4).
+
 ---
 
 ## 10 · Cómo se trabaja el código de este repo (capa operativa)

@@ -1,0 +1,41 @@
+{
+  "id": "multicanal",
+  "nombre": "Multicanal unificado (web + WhatsApp + social, un cerebro)",
+  "modulo_gold": "M4",
+  "que_hace": "Ata N canales a UN mismo agente sobre el conector clinics: valida el juego de canales, garantiza un canal por transporte y orquesta el atado atomico. Lleva de 1 canal/agente a N (gap de Gold). Simetrico a M3: M3 compone N agentes por cliente, M4 compone N canales por agente.",
+  "tier": "Gold",
+  "compone": ["integrations/clinics"],
+  "no_reimplementa": "agente-clinicas (importa la verdad de clinics: el cerebro es el suyo; M4 solo ata canales)",
+  "verticales": ["veterinaria", "dental", "estetica"],
+  "region_default": "LATAM",
+  "canales": {
+    "web": "capacidad propia (storefront Next.js) — sin credencial externa",
+    "whatsapp": "transporte: 'baileys' (clientes actuales) | 'cloud_api' (clientes nuevos) — decidido 2026-07-16, CLAUDE.md 9.6",
+    "instagram_dm": "Meta Graph API",
+    "messenger": "Meta Graph API"
+  },
+  "config_env": {
+    "CLINICS_REPO": "ruta al repo agente-clinicas (NO hardcodear). Reusa el execute del conector clinics para la pata baileys.",
+    "META_ACCESS_TOKEN": "token de Meta Graph. Requerido por cloud_api, instagram_dm y messenger.",
+    "WHATSAPP_PHONE_NUMBER_ID": "requerido solo por whatsapp/cloud_api.",
+    "IG_BUSINESS_ACCOUNT_ID": "requerido solo por instagram_dm.",
+    "FB_PAGE_ID": "requerido solo por messenger.",
+    "comentario": "credenciales viven en el entorno, nunca aqui ni en el repo (GUARDA-005)."
+  },
+  "contrato": ["manifest", "inputs", "dry_run", "execute", "oracle"],
+  "guardas": [
+    "GUARDA-001 (execute atomico tras OK humano)",
+    "GUARDA-003 (juego de canales atomico; canal sin credencial se BLOQUEA, no se finge)",
+    "GUARDA-005 (sin hardcodeo de cuentas: todo por env)"
+  ],
+  "decisiones": [
+    "DEC-006 pricing (Gold promete 'web, WhatsApp, social')",
+    "DEC-008 portafolio componible",
+    "DEC-014 mapeo tier->plan (Gold bloqueado hasta M4/M5)",
+    "CLAUDE.md 9.6 (canales = Instagram DM + Messenger; WhatsApp en convivencia)"
+  ],
+  "bloqueos": [
+    "licencia Meta EN TRAMITE: cloud_api, instagram_dm y messenger no pueden ejecutar hasta que Meta apruebe. dry_run si corre (valida la forma sin credenciales); execute bloquea por falta de env. No se simula la aprobacion (GUARDA-003).",
+    "hueco #17: mapeo tier->plan para Gold (precio del bundle, no del canal suelto)"
+  ]
+}

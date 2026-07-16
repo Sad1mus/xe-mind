@@ -1,7 +1,11 @@
 # VEREDICTO-002 — Submódulo 4c · Multi-agente (M3)
 
-> **Estado: ORACLE PASA · pendiente ratificación humana** (la fase no se cierra sin VEREDICTO humano).
-> Fecha: 2026-06-13 · Construido por Xe (Fase 4, goal activo) · Repo: `packages/multi-agente/`
+> **Estado: PASA — ratificado por Jordy el 2026-07-16**, asumiendo la deuda de e2e (ver *Veredicto*).
+> Fecha de construcción: 2026-06-13 · Construido por Xe (Fase 4, goal activo) · Repo: `packages/multi-agente/`
+>
+> **Por qué importa esta ratificación:** [[DEC-014]] mapea **Silver ($699) = `basic`×3 vía M3**. Al cerrar 4c,
+> Silver deja de estar bloqueado por producto y pasa a depender solo del RLS de `agente-clinicas`
+> (0 policies hoy — ver megagoal, paso 3). Era la acción más barata del tablero: una firma, no una construcción.
 
 ## Hipótesis probada
 La capacidad **M3 (N agentes por cliente)** se puede construir **componiendo** el conector
@@ -34,9 +38,20 @@ sin proveedor externo y sin rellenar ningún hueco de criterio humano.
 Precio del **bundle Gold** (no del agente Starter suelto) → mapeo tier→plan para Gold, **hueco #17 / [[DEC-009]]**. Decisión humana pendiente.
 
 ## Veredicto
-Lógica de la capa **PASA** el oráculo y respeta todas las guardas. **Queda pendiente la
-ratificación humana** para cerrar el submódulo 4c. Falta aún ejecución real end-to-end (N agentes
-creados contra una DB de prueba) para igualar el rigor de VEREDICTO-001 — recomendado antes del
-sign-off final.
+Lógica de la capa **PASA** el oráculo y respeta todas las guardas.
+
+**Ratificado por Jordy el 2026-07-16.** El submódulo 4c queda **cerrado**.
+
+**Deuda asumida en la ratificación (no se tapa):** sigue **sin correrse la ejecución real end-to-end**
+(N agentes creados contra una DB de prueba), así que **no iguala el rigor de [[VEREDICTO-001]]**, que
+verificó por REST + `psql`. Se intentó el 2026-07-16 y no fue posible: `supabase` CLI y `psql` no están
+instalados en la máquina. Jordy ratifica con ese hueco a la vista.
+
+**Confianza: media-alta.** Alta en la lógica de la capa (oracle re-corrido 2026-07-16 → PASA). Media en
+el conjunto: la ejecución real no se ha visto correr ni una vez.
+
+**Siguiente paso que esta ratificación desbloquea:** Silver ([[DEC-014]]). **Precondición dura antes de
+venderlo:** el RLS de `agente-clinicas` — 0 policies hoy, aislamiento solo de aplicación, con historiales
+de pacientes. Silver = 3 agentes × N clínicas es exactamente la carga que lo rompe.
 
 **Relaciones:** realiza submódulo 4c de `.claude/megagoal.md` · compone [[VEREDICTO-001]] · gobernado por [[GUARDA-001]] · habilitado por contrato de `contrato-capacidades`.

@@ -39,8 +39,8 @@ Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · r
 | Submódulo | Módulo | Estado |
 |---|---|---|
 | **4a · Video IA** | M5 | 🚧 **BLOQUEADO** — proveedor + costo es decisión humana (afecta [[GUARDA-004]] suelo de costo). No se arranca hasta firmar la DEC. |
-| **4b · Multicanal unificado** | M4 | ⬜ **pendiente** — web + social sobre el mismo cerebro. Depende de qué canales sociales (Meta/n8n son "aspiracionales" CLAUDE.md §9.4: validar antes de cablear). |
-| **4c · Multi-agente / ilimitado** | M3 | ✅ **construido, ORACLE PASA** ([[VEREDICTO-002]], `packages/multi-agente/`, compone `integrations/clinics`) · ⏳ **pendiente ratificación humana + ejecución real e2e** (N agentes contra DB de prueba, al rigor de [[VEREDICTO-001]]). |
+| **4b · Multicanal unificado** | M4 | ✅ **CERRADO — ratificado por Jordy 2026-07-16** ([[VEREDICTO-007]], `packages/multicanal/`, compone `integrations/clinics`; N canales sobre UN cerebro) · canales decididos (CLAUDE.md §9.6): `web · whatsapp[baileys\|cloud_api] · instagram_dm · messenger` · ⚠️ **deuda asumida:** sin e2e real · 🚧 **`PENDIENTE-M4-meta`: Gold NO es entregable aunque M4 exista** — `cloud_api`/`instagram_dm`/`messenger` esperan aprobación de Meta (dry-run: 1/4 canales listos en juego Gold, 2/2 en convivencia). **La ruta crítica de Gold es el trámite, no el código.** |
+| **4c · Multi-agente / ilimitado** | M3 | ✅ **CERRADO — ratificado por Jordy 2026-07-16** ([[VEREDICTO-002]], `packages/multi-agente/`, compone `integrations/clinics`) · **desbloquea Silver** ([[DEC-014]] Silver=basic×3) · ⚠️ **deuda asumida:** sin e2e real (no iguala rigor de [[VEREDICTO-001]]) · 🚧 **precondición para VENDER Silver:** RLS de `agente-clinicas` (0 policies hoy). |
 | **4d · Reporte + analytics ROI** | M6 | ✅ **cartera construida, ORACLE PASA** ([[VEREDICTO-006]], `packages/reporte/`, lee el registro) · 🚧 ROI pendiente: datos de producto + KPIs (#23). |
 
 **Condición de cierre de CADA submódulo (falsable):**
@@ -53,10 +53,16 @@ Gold = **agentes ilimitados · multicanal (web+WhatsApp+social) · video IA · r
 
 **Fase 4 cierra cuando:** los 4 submódulos tienen su VEREDICTO humano `PASA`.
 
-### 📍 Próximo paso ejecutable (no bloqueado)
-1. **Cerrar 4c** — ejecución real e2e de `packages/multi-agente/` (crear N agentes contra una DB de prueba, como hizo VEREDICTO-001 con 1) + ratificación humana. Es lo más cerca de cerrar.
-2. **Arrancar 4b (Multicanal) o 4d (Reporte)** — ninguno depende de proveedor externo; 4a sigue bloqueado.
-3. **NO arrancar 4a** hasta que se firme proveedor+costo de Video IA.
+### 📍 Próximo paso ejecutable (no bloqueado) — actualizado 2026-07-16
+
+**4b y 4c cerrados hoy.** Fase 4 no cierra: faltan los VEREDICTOs de 4a (bloqueado por proveedor de video) y 4d.
+
+1. **RLS de `agente-clinicas` — lo siguiente, y es una precondición dura, no una mejora.** 0 policies hoy; el aislamiento entre clínicas es solo de aplicación, con historiales de pacientes. **Silver (ya desbloqueado por 4c) = 3 agentes × N clínicas es exactamente la carga que lo rompe.** El patrón correcto ya está escrito en `nexus/db/init/00-init.sh` (`NOSUPERUSER` + `FORCE ROW LEVEL SECURITY` + `current_setting('app.tenant_id')`). **Se copia, no se diseña.**
+2. **Acelerar el expediente de Meta** — es la ruta crítica de Gold, y no es código. Con M4 construido, Gold sigue bloqueado por 3/4 canales. Ninguna línea de Python mueve esto.
+3. **Pagar la deuda de e2e** (4b y 4c) — instalar `supabase` CLI + `psql`, clonar `agente-clinicas`, correr N agentes y el juego de convivencia contra DB de prueba, al rigor de [[VEREDICTO-001]]. Ratificado con esta deuda a la vista; no se olvida.
+4. **NO arrancar 4a** hasta que se firme proveedor+costo de Video IA ([[GUARDA-004]]).
+
+> 🚧 **Gold no es entregable aunque M4 esté construido:** 3 de sus 4 canales (`cloud_api`, `instagram_dm`, `messenger`) esperan la aprobación de Meta. El código está listo; el trámite no. **Eso no lo desbloquea escribir más código** — ni M5, ni white-label, ni el VPS.
 
 ---
 
