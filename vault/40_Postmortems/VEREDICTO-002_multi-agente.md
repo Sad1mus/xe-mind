@@ -4,8 +4,14 @@
 > Fecha de construcción: 2026-06-13 · Construido por Xe (Fase 4, goal activo) · Repo: `packages/multi-agente/`
 >
 > **Por qué importa esta ratificación:** [[DEC-014]] mapea **Silver ($699) = `basic`×3 vía M3**. Al cerrar 4c,
-> Silver deja de estar bloqueado por producto y pasa a depender solo del RLS de `agente-clinicas`
-> (0 policies hoy — ver megagoal, paso 3). Era la acción más barata del tablero: una firma, no una construcción.
+> **Silver deja de estar bloqueado por producto.** Era la acción más barata del tablero: una firma, no una construcción.
+>
+> ⚠️ **CORRECCIÓN 2026-07-16 (mismo día).** Esta cabecera decía que Silver *"pasa a depender solo del RLS de
+> `agente-clinicas`"*, y el veredicto de abajo lo llamaba *"precondición dura"*. **Falso.** `agente-clinicas`
+> usa `service_role`, que **bypassea RLS por diseño**: añadir policies no habría cambiado nada. Y más agentes
+> por cliente **no altera** el modelo de aislamiento (mismo `.eq('clinic_id')`, mismo código) — la urgencia
+> estaba fabricada. **Silver no depende de ello.** Riesgo real hoy: bajo. Corrección completa y decisión
+> tomada (opción B, capa de repositorio) en CLAUDE.md §9.6, Decisión 7.
 
 ## Hipótesis probada
 La capacidad **M3 (N agentes por cliente)** se puede construir **componiendo** el conector
@@ -50,8 +56,12 @@ instalados en la máquina. Jordy ratifica con ese hueco a la vista.
 **Confianza: media-alta.** Alta en la lógica de la capa (oracle re-corrido 2026-07-16 → PASA). Media en
 el conjunto: la ejecución real no se ha visto correr ni una vez.
 
-**Siguiente paso que esta ratificación desbloquea:** Silver ([[DEC-014]]). **Precondición dura antes de
-venderlo:** el RLS de `agente-clinicas` — 0 policies hoy, aislamiento solo de aplicación, con historiales
-de pacientes. Silver = 3 agentes × N clínicas es exactamente la carga que lo rompe.
+**Siguiente paso que esta ratificación desbloquea:** Silver ([[DEC-014]]) — **sin precondición técnica**.
+
+> ⚠️ **CORRECCIÓN (mismo día).** Este párrafo declaraba el RLS de `agente-clinicas` como *"precondición dura
+> antes de venderlo"* porque *"Silver = 3 agentes × N clínicas es exactamente la carga que lo rompe"*.
+> **Las dos afirmaciones eran falsas** (ver cabecera). El aislamiento de `agente-clinicas` es un tema real
+> —0 policies, frontera solo en aplicación— pero **es independiente de Silver** y su riesgo hoy es bajo.
+> Se trata por su cuenta bajo la Decisión 7 (opción B), no como bloqueo de este veredicto.
 
 **Relaciones:** realiza submódulo 4c de `.claude/megagoal.md` · compone [[VEREDICTO-001]] · gobernado por [[GUARDA-001]] · habilitado por contrato de `contrato-capacidades`.
