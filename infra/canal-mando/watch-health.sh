@@ -65,7 +65,12 @@ fi
 
 TOKEN="$(grep -E '^TELEGRAM_BOT_TOKEN=' "$ENV_FILE" | head -1 | cut -d= -f2- | sed -e 's/^[[:space:]"'\'']*//' -e 's/[[:space:]"'\'']*$//')"
 if [ -z "$TOKEN" ]; then echo "sin TELEGRAM_BOT_TOKEN en ${ENV_FILE}"; exit 1; fi
-curl -s -o /dev/null -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+RESP="$(curl -s -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
   --data-urlencode "chat_id=${ALLOWED_CHAT_ID}" \
-  --data-urlencode "text=${MSG}"
-echo "alerta enviada a ${ALLOWED_CHAT_ID}"
+  --data-urlencode "text=${MSG}")"
+if printf '%s' "$RESP" | grep -q '"ok":true'; then
+  echo "alerta enviada a ${ALLOWED_CHAT_ID} (Telegram ok)"
+else
+  echo "FALLO al enviar: $(printf '%s' "$RESP" | head -c 200)"
+  exit 1
+fi
