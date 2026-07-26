@@ -15,6 +15,7 @@
 import { gate, type Action, type GovConfig, type Usage, type Verdict } from "./governance.js";
 import { audit } from "./audit.js";
 import { runXeSession } from "./agent.js";
+import { getAgencyStatus, isStatusQuery } from "./status.js";
 
 // --- Config desde env (GUARDA-005: nada hardcodeado) ---
 const env = process.env;
@@ -61,6 +62,20 @@ export async function handleMessage(
   // Estado de consumo de la ventana — TODO: leer del substrato/contador persistente.
   const usage: Usage = loadUsage();
 
+  // Fast-path determinista para consultas de estado: lee el registro vía el connector
+  // de reporte (<1s) en vez de que Xe explore el repo con claude -p (evita el timeout).
+  if (isStatusQuery(text)) {
+    const action: Action = { tool: "reporte_dry_run", kind: "read", confidence: "alta", summary: text.slice(0, 80) };
+    const v = gate(action, usage, cfg);
+    audit(AUDIT_LOG, { ts: nowIso(), chatId, teatro: TEATRO, action, verdict: v });
+    if (v.decision === "allow") {
+      await reply(getAgencyStatus(env.XE_REPO_CWD ?? "../../.."));
+      return;
+    }
+    await reply(`🚫 ${"reason" in v ? v.reason : "bloqueado por el gate"}`);
+    return;
+  }
+
   // El gate, cerrado sobre usage+cfg, y con el doble confirm para irreversibles.
   const decide = async (action: Action): Promise<Verdict> => {
     const v = gate(action, usage, cfg);
@@ -77,9 +92,12 @@ export async function handleMessage(
     const out = await runXeSession(buildPrompt(text), {
       systemPromptPath: env.XE_SYSTEM_PROMPT_PATH ?? "../../CLAUDE.md",
       cwd: env.XE_REPO_CWD ?? "../../..",
-      apiKey: env.ANTHROPIC_API_KEY ?? "",
-      classify, // TODO: mapear cada tool del SDK a su ActionKind real
-      decide,
+      // Modo OPERATIVO (con manos): con GATE_SETTINGS, Xe ejecuta bajo el gate-hook
+      // (permissionMode "default"). Sin settings => "plan" (solo lectura, default seguro).
+      // El dinero/envío lo frena el gate-hook y Xe lo REDACTA; su respuesta (con el dry-run)
+      // se relaya tal cual al humano por Telegram.
+      permissionMode: env.GATE_SETTINGS ? "default" : "plan",
+      settingsPath: env.GATE_SETTINGS,
     });
     await reply(out);
   } catch (e) {

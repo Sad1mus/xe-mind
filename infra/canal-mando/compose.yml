@@ -1,0 +1,54 @@
+# Canal de mando de Xe — despliegue endurecido (RUNBOOK multicliente).
+# NO expone puerto: Telegram es long-poll SALIENTE => cero superficie inbound.
+# NO monta docker.sock. Rootfs read-only + tmpfs para lo escribible. Substrato read-only.
+services:
+  canal-mando:
+    build: .
+    image: agencia/xe-canal-mando:0.1.0
+    container_name: xe-canal-mando
+    restart: unless-stopped
+    env_file:
+      - .env                       # token del bot, allowlist, token de suscripción, teatro, topes
+    environment:
+      EXEC_MODE: reversible        # Xe con manos: reversible ejecuta; dinero/envío se redacta
+      GATE_SETTINGS: /app/settings.gate.json  # el gate-hook (PreToolUse) frena cada tool-call
+      XE_REPO_CWD: /repo           # cwd del agente = substrato (read-only)
+      XE_SYSTEM_PROMPT_PATH: /repo/CLAUDE.md
+      SUBSTRATE_PATH: /repo/vault
+      REGISTRO_DB: /data/registro.db
+      AUDIT_LOG_PATH: /data/audit.ndjson
+      KILL_SWITCH_PATH: /data/KILL
+      # Topes (GUARDA-006): tokens operativos > 0 (si no, el gate frena hasta lo reversible);
+      # dinero en 0 (el dinero NO lo ejecuta Xe, lo redacta para el humano).
+      CAP_TOKENS_PER_SESSION: "2000000"
+      CAP_TOKENS_PER_DAY: "20000000"
+      CAP_USD_PER_ACTION: "0"
+      CAP_USD_PER_DAY: "0"
+    volumes:
+      - type: bind                 # el repo (constitución + packages + vault) — SOLO LECTURA
+        source: ${XE_REPO_HOST_PATH:-/srv/xe-mind}
+        target: /repo
+        read_only: true
+      - type: volume               # datos del canal (registro DB, audit, kill switch) — escribible
+        source: xe-canal-data
+        target: /data
+    read_only: true                # rootfs inmutable
+    tmpfs:
+      - /tmp
+      - /home/app/.claude:uid=10001,gid=10001  # cache/token de claude (efímero)
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 512
+    mem_limit: 2g
+    memswap_limit: 2g
+    cpus: 1.5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  xe-canal-data:

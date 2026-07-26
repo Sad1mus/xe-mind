@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+*.ndjson
+oracle.audit.ndjson
+KILL
+ORACLE_KILL
+smoke.agent.ts
+oracle.gate.ts
+*.log
+.git

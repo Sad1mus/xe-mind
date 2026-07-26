@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/app/node_modules/.bin/tsx /app/gate-hook.ts"
+          }
+        ]
+      }
+    ]
+  }
+}

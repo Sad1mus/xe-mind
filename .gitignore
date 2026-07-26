@@ -1,9 +1,25 @@
 .DS_Store
 node_modules/
-*.log
+
+# Secretos y config local (NUNCA se versionan) — GUARDA-005
 .env
 .env.local
 *.local
+**/.env
 .claude/settings.local.json
+*.local.json
+
+# Datos de runtime del canal de mando y de los packages (verdad viva, no código)
+*.log
+*.ndjson
+*.db
+*.sqlite
+*.sqlite3
+KILL
+
+# Python / artefactos de ejecución y pruebas
 __pycache__/
 *.pyc
+**/sandbox/
+ORACLE_KILL
+ORACLE_HOOK_KILL
