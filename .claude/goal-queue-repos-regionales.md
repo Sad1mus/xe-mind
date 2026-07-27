@@ -45,7 +45,7 @@ CONTEXTO / RUTAS:
 ## == FASE 1 — Versionar Juana (nuestro, mismo patrón que ZENKAI) ==
 
 ## [done] 2. Repo-ificar grupojuana/agente-wa → Sad1mus/juana-agente-wa (privado)
-**Evidencia:** `.gitignore` endurecido; `git init -b main`; escaneo detectó (bien) un dato real: **teléfono del atelier `34968705722` en `.env.example`** (plantilla debe llevar placeholder) → **scrubbeado a `34XXXXXXXXX`** en Juana. Se descubrió el MISMO valor en ZENKAI (ya pusheado) → scrubbeado y pusheado también (`c76da4a`). Escaneo final de Juana (claves sk-ant/sk-or-v1/JWT + el teléfono) → **vacío**; ningún `.env`/`auth`/`data`/`node_modules` staged. Commit + `gh repo create Sad1mus/juana-agente-wa --private --source=. --push` → creado **PRIVATE**, `main...origin/main`.
+**Evidencia:** `.gitignore` endurecido; `git init -b main`; escaneo detectó (bien) un dato real: **el teléfono del atelier en `.env.example`** (plantilla debe llevar placeholder) → **scrubbeado a `34XXXXXXXXX`** en Juana. Se descubrió el MISMO valor en ZENKAI (ya pusheado) → scrubbeado y pusheado también (`c76da4a`). Escaneo final de Juana (claves sk-ant/sk-or-v1/JWT + el teléfono) → **vacío**; ningún `.env`/`auth`/`data`/`node_modules` staged. Commit + `gh repo create Sad1mus/juana-agente-wa --private --source=. --push` → creado **PRIVATE**, `main...origin/main`.
 **⚠️ Deuda:** el teléfono sigue en el HISTORIAL de ZENKAI (commit `a3df959`) y de Juana (commit inicial); HEAD limpio en ambos. Purga de historial (filter-repo + force-push) = decisión humana (repos privados + número de negocio → severidad baja).
 **No tocó:** repos privados; sin secretos al repo.
 
