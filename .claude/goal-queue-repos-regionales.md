@@ -1,7 +1,7 @@
 # Goal Queue — Versionar productos regionales para que Xe los orqueste (3 continentes)
 
 estado: activa
-current: 5
+current: 5 (COMPLETA — 5/5)
 turn_cap_por_item: 15
 
 <!--
