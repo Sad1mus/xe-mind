@@ -1,7 +1,7 @@
 # Goal Queue — Fase D: Xe orquesta la ENTREGA desde la VPS (traer repo → construir → visto humano)
 
 estado: activa
-current: 6
+current: 6 (COMPLETA — 6/6)
 turn_cap_por_item: 15
 
 <!--
@@ -93,7 +93,11 @@ RUTAS:
 
 ## == FASE 5 — DEC + cierre ==
 
-## [pendiente] 6. DEC-019: Fase D cableada en dry-run + qué falta para execute real; docs + commit
+## [done] 6. DEC-019: Fase D cableada en dry-run + qué falta para execute real; docs + commit
+**Evidencia:** creado `vault/10_Decisions/DEC-019_Fase-D-entrega-desde-VPS.md` (estado `propuesta`, con "qué la invalidaría", fuente = este goal). `repos-productos-regionales`/`MEMORY.md` actualizados (línea DEC-019). Commit con **gate de escaneo real** (`if scan==0`): `matches secretos: 0` → commit `99d3def` + push. Incluye repo_fetch, entrega_dryrun, classify/oracle.hook, RUNBOOK, DEC-019.
+**No tocó:** DEC-019 sin ratificar (propuesta); pricing no inventado; el scan GATEÓ el commit.
+
+<!-- ORIGINAL: [pendiente] 6. DEC-019: Fase D cableada en dry-run + qué falta para execute real; docs + commit -->
 **Condición:** existe `vault/10_Decisions/DEC-019_Fase-D-entrega-desde-VPS.md` (estado `propuesta`, fuente = este goal, con "qué la invalidaría") que fija: Xe trae el producto desde su repo (PAT) y construye la entrega en dry-run; el INSERT/envío quedan a visto humano; qué falta para el execute real. Actualiza `repos-productos-regionales.md` y el índice `MEMORY.md`. Commit a xe-mind con **gate de escaneo real** (solo commitea si el scan de secretos da 0). Push = patrón de respaldo off-local.
 **Check:** DEC-019 existe con frontmatter válido y "qué la invalidaría"; índice actualizado; `git log -1` muestra el commit; scan del diff staged = 0 secretos (gateado).
 **No tocar:** DEC-019 no se ratifica (sigue `propuesta`); no se inventa pricing; el scan GATEA el commit.
