@@ -74,6 +74,12 @@ check("go-live (abrir al público) → deny (visto humano, DEC-017)",
 check("enviar-al-cliente → deny (visto humano, GUARDA-001)",
   runHook({ tool_name: "Bash", tool_input: { command: "bash entrega.sh enviar-al-cliente clinica-sonrisa" } }, REV).decision, "deny");
 
+// Fase D: entrega dry-run construye (reversible); nueva_clinica hace el INSERT en Supabase = visto humano.
+check("entrega_dryrun dry-run → allow (construir, reversible)",
+  runHook({ tool_name: "Bash", tool_input: { command: "python3 integrations/clinics/entrega_dryrun.py dry-run" } }, REV).decision, "allow");
+check("nueva_clinica (INSERT Supabase) → deny (entrega, visto humano)",
+  runHook({ tool_name: "Bash", tool_input: { command: "cd /tmp/clinics-checkout && npx tsx scripts/nueva_clinica.ts --json '{\"nombre\":\"X\"}'" } }, REV).decision, "deny");
+
 // kill-switch corta todo, incluso lectura.
 writeFileSync(KILL, "x");
 check("kill-switch → deny (incluso Read)", runHook({ tool_name: "Read", tool_input: { file_path: "x" } }, REV).decision, "deny");
@@ -81,7 +87,7 @@ rmSync(KILL);
 
 // audit: una línea por decisión.
 const lines = existsSync(AUDIT) ? readFileSync(AUDIT, "utf8").trim().split("\n").filter(Boolean) : [];
-let auditOk = lines.length >= 17;
+let auditOk = lines.length >= 19;
 for (const l of lines) {
   try {
     JSON.parse(l);
@@ -89,7 +95,7 @@ for (const l of lines) {
     auditOk = false;
   }
 }
-check(`audit NDJSON válido (${lines.length} líneas, >=17)`, auditOk ? "ok" : "fail", "ok");
+check(`audit NDJSON válido (${lines.length} líneas, >=19)`, auditOk ? "ok" : "fail", "ok");
 
 if (pass) {
   console.log("HOOK GATE OK — reversible ejecuta; dinero/envío/destructivo/desconocido bloqueados; kill corta; auditado.");
