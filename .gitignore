@@ -23,3 +23,6 @@ __pycache__/
 **/sandbox/
 ORACLE_KILL
 ORACLE_HOOK_KILL
+
+# Worktrees de git anidados (viven dentro del repo pero NO son código a versionar)
+.claude/worktrees/

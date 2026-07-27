@@ -1,0 +1,21 @@
+{
+  "id": "onboarding-meta",
+  "nombre": "Provisioning por Embedded Signup (construir auto, entregar humano)",
+  "rol": "mecanismo de provisioning de DEC-017 — el `code` de Embedded Signup dispara la CONSTRUCCION del paquete WhatsApp Cloud; la ENTREGA/apertura al cliente queda en visto humano",
+  "que_hace": "Recibe el `code` de Embedded Signup + tier/lente/marca; intercambia el code por el token del cliente, lee WABA_ID/PHONE_NUMBER_ID, suscribe la app, registra el numero, apunta el webhook, y da de alta el cliente en packages/registro (estado 'onboarding'). NO abre al publico ni envia al cliente.",
+  "tier": "transversal (Fase D — automatiza la conexion de clientes nuevos por la via oficial de Meta)",
+  "backend": "Python3 stdlib; cliente Graph inyectable (FakeGraph sin red / RealGraph = hueco). Alta via packages/registro (REGISTRO_DB por env).",
+  "contrato": ["manifest", "inputs", "dry_run", "execute", "oracle"],
+  "guardas": [
+    "GUARDA-001 (execute da de alta solo con --confirm; jamas cobra/firma/abre al cliente; go-live = visto humano)",
+    "GUARDA-002 (residencia por lente, la deriva registro)",
+    "GUARDA-003 (requerido faltante / lente|tier invalido -> BLOQUEO; Meta real -> PENDIENTE-META-APP, no se inventa)",
+    "GUARDA-005 (REGISTRO_DB por env, sin hardcode)"
+  ],
+  "decisiones": ["DEC-017 fulfillment por pago (construir auto, entregar humano)", "DEC-006 tiers", "DEC-009 Starter->basic", "DEC-010 local-first"],
+  "bloqueos": [
+    "🚧 PENDIENTE-META-APP: RealGraph no se implementa hasta Fase 0 (Tech Provider + App Review; ver vault/00_System/onboarding-meta-tech-provider.md). Todo el flujo se prueba con FakeGraph.",
+    "🚧 hueco #26: lente↔marca↔LATAM (registro usa Americas/EMEA/APAC; EtherLabX=LATAM se pasa como marca explicita sobre lente Americas — decision humana, no se auto-mapea)",
+    "🚧 DEC-017 en estado 'propuesta' (VEREDICTO humano pendiente) + hueco de pricing (plazo de compromiso)"
+  ]
+}

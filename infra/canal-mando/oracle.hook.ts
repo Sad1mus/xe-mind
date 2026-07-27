@@ -64,6 +64,16 @@ check("mcp__Ramp_Data__pay → deny (dinero MCP: ramp)", runHook({ tool_name: "m
 check("mcp__apify__search → allow (MCP genérico reversible)", runHook({ tool_name: "mcp__apify__search-actors", tool_input: {} }, REV).decision, "allow");
 check("Frobnicate → deny (tool inventada, baja §4)", runHook({ tool_name: "Frobnicate", tool_input: {} }, REV).decision, "deny");
 
+// DEC-017 / onboarding-meta: construir (provisioning) es reversible; go-live/entrega es visto humano.
+check("onboarding-meta dry-run → allow (provisioning read)",
+  runHook({ tool_name: "Bash", tool_input: { command: "python3 packages/onboarding-meta/connector.py dry-run" } }, REV).decision, "allow");
+check("onboarding-meta execute → allow (alta reversible)",
+  runHook({ tool_name: "Bash", tool_input: { command: "REGISTRO_DB=/tmp/x.db python3 packages/onboarding-meta/connector.py execute --confirm" } }, REV).decision, "allow");
+check("go-live (abrir al público) → deny (visto humano, DEC-017)",
+  runHook({ tool_name: "Bash", tool_input: { command: "python3 packages/onboarding-meta/connector.py go-live --abrir-al-publico" } }, REV).decision, "deny");
+check("enviar-al-cliente → deny (visto humano, GUARDA-001)",
+  runHook({ tool_name: "Bash", tool_input: { command: "bash entrega.sh enviar-al-cliente clinica-sonrisa" } }, REV).decision, "deny");
+
 // kill-switch corta todo, incluso lectura.
 writeFileSync(KILL, "x");
 check("kill-switch → deny (incluso Read)", runHook({ tool_name: "Read", tool_input: { file_path: "x" } }, REV).decision, "deny");
@@ -71,7 +81,7 @@ rmSync(KILL);
 
 // audit: una línea por decisión.
 const lines = existsSync(AUDIT) ? readFileSync(AUDIT, "utf8").trim().split("\n").filter(Boolean) : [];
-let auditOk = lines.length >= 13;
+let auditOk = lines.length >= 17;
 for (const l of lines) {
   try {
     JSON.parse(l);
@@ -79,7 +89,7 @@ for (const l of lines) {
     auditOk = false;
   }
 }
-check(`audit NDJSON válido (${lines.length} líneas, >=13)`, auditOk ? "ok" : "fail", "ok");
+check(`audit NDJSON válido (${lines.length} líneas, >=17)`, auditOk ? "ok" : "fail", "ok");
 
 if (pass) {
   console.log("HOOK GATE OK — reversible ejecuta; dinero/envío/destructivo/desconocido bloqueados; kill corta; auditado.");
